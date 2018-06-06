@@ -1,0 +1,116 @@
+// Footer //
+footer {
+  .wrapper {
+    background-color: $navy-blue-text;
+    
+    .content {
+      padding: 45px 0 50px 0;
+
+      .site-map {
+        @include span-columns (20 of 24);
+
+        ul {
+          @include span-columns (5 of 20);
+
+          li {
+            line-height: 1.2;
+
+            a {
+              color: $white;
+              font-size: 13.4px;
+              font-family: "Museo 300";
+            }
+
+            &:first-of-type {
+              margin-bottom: 20px;
+              line-height: normal;
+
+              a {
+                text-transform: uppercase;
+                font-family: "Museo 700";
+              }
+            }
+          }
+        }
+      }
+
+      .menu-right {
+        @include span-columns (4 of 24);
+        @include omega;
+
+        img {
+          width: 22px;
+          height: 20px;
+          margin-bottom: 9px;
+        }
+
+        a {
+          width: 42%;
+          display: block;
+          float: left;
+          padding: 7px 0 0 0;
+          margin-left: 17px;
+
+          &:last-of-type {
+            float: right;
+            width: 28%;
+            margin-left: 0;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+              font-size: 16px;
+              color: $white;
+              text-align: center;
+              line-height: 1.1;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .social-media-box {
+        @include span-columns (24 of 24);
+        padding: 50px 0 30px 0;
+        border-bottom: solid $white 1.5px;
+
+        .social-media,
+        .europa-footer-logo {
+          @include span-columns (4 of 24);
+        }
+
+        .social-media {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            height: 40px;
+            width: 40px;
+            float: left;
+          }
+        }
+
+        .europa-footer-logo {
+          @include shift (16 of 24);
+
+          img {
+            width: 95%;
+            float: right;
+          }
+        }
+      }
+
+      .footer-text {
+        @include span-columns (24 of 24);
+        text-align: center;
+        margin: 17px 0 0 0;
+        font-size: 12.8px;
+      }
+    }
+  }
+}

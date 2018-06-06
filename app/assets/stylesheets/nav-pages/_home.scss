@@ -1,0 +1,246 @@
+#home-page {
+  .banner-slider {
+    .bx-wrapper {
+      margin-bottom: 0;
+
+      .bx-viewport {
+        height: 520px !important;
+      }
+    }
+  }
+
+  .home-products-container {
+    padding: 55px 0;
+    
+    .home-products {
+      padding-top: 40px;
+
+      .with-six-columns {
+        .about-img-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 170px;
+          margin-bottom: 20px;
+
+          .product-info-hide {
+            display: none;
+          }
+        }
+
+        h4 {
+          font-family: 'Museo 500';
+          text-align: center;
+          font-size: 21px;
+          height: 50px;
+          overflow: hidden;
+        }
+
+        &:hover {
+          .about-img-box {
+            .product-info-hide {
+              @include span-columns (4 of 24);
+              display: flex;
+              align-items: center;
+              position: absolute;
+              background-color: rgba(0, 132, 199, .8);
+              height: 170px;
+              overflow: hidden;
+              padding: 10px;
+
+              p {
+                text-align: center;
+                font-size: 14px;
+                margin-bottom: 0;
+                max-height: 100%;
+                width: 100%;
+                overflow: hidden;
+              }
+            }
+          }
+
+          h4 {
+            color: $light-blue-text;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-home-blog {
+    background: $gray-bg;
+
+    .home-blog-container {
+      padding: 55px 0;
+
+      .home-blog-content {
+        padding-top: 40px;
+        display: flex;
+
+        .with-three-columns {
+          margin: 0;
+          padding: 26px 0;
+
+          &:nth-of-type(2) {
+            margin: 0 auto;
+          }
+
+          .values-img-box {
+            @include span-columns (7 of 7);
+            display: flex;
+            align-items: center;
+
+            img {
+              height: 185px;
+              width: 100%;
+            }
+          }
+
+          figcaption {
+            clear: left;
+            font-size: 18px;
+            font-family: "Museo 700";
+            padding: 30px 0 20px 0;
+            height: 105px;
+            margin-bottom: 0;
+          }
+
+          .more-infos {
+            .blue {
+              margin-bottom: 0;
+              height: 85px;
+              overflow: hidden;
+            }
+
+            .gray-text {
+              margin: 24px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-institutional {
+    padding: 55px 0;
+
+    .institutional-content {
+      @include span-columns (24 of 24);
+      padding-top: 40px;
+
+      h3,
+      p {
+        margin-bottom: 25px;
+      }
+
+      .tecnology-container {
+        @include span-columns (12 of 24);
+
+        iframe {
+          width: 100%;
+          height: 315px;
+        }
+      }
+
+      .environmental-responsibility {
+        @include span-columns (11 of 24);
+        @include shift (1 of 24);
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .responsibility-img-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .europa-manifest {
+    height: 482px;
+
+    .start-video {
+      position: absolute;
+      padding: 12px;
+      left: 47%;
+      top: 54%;
+      opacity: .3;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 1;
+        -webkit-filter: brightness (1);
+      }
+    }
+
+    .thumbnail_container {
+      height: 482px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      background-color: rgba(0, 0, 0, .9);
+
+      h2 {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 25%;
+        font-size: 50px;
+        text-align: center;
+        font-family: "Museo 300";
+
+        span {
+          font-family: "Museo 700";
+        }
+      }
+    }
+
+    iframe {
+      &.thumbnail {
+        height: 100%;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .home-awards-container {
+    padding: 55px 0;
+
+    .home-awards-content {
+      padding-top: 40px;
+
+      .with-three-columns {
+        @include span-columns (6 of 24);
+        @include shift (2 of 24);
+
+        &:first-of-type {
+          @include shift (1 of 24);
+        }
+        
+        h2 {
+          font-family: "Museo 700";
+          border-bottom: solid 1px $light-blue-text;
+          padding-bottom: 7px;
+        }
+
+        .awards-img-box {
+          @include span-columns (4 of 6);
+          @include shift (1 of 6);
+        }
+
+        figcaption {
+          clear: left;
+          background: $gray-bg;
+          padding: 28px 20px;
+          height: 190px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

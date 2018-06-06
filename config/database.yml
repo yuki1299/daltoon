@@ -1,0 +1,27 @@
+default: &defaults
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: loldesign
+  password: loldesign 
+  host: localhost
+
+development:
+  <<: *defaults
+  adapter: postgresql
+  database: daltoon_development
+
+test:
+  <<: *defaults
+  adapter: postgresql
+  database: daltoon_test
+
+production:
+  <<: *defaults
+  adapter: postgresql
+  database: daltoon_production
+
+  staging:
+  <<: *defaults
+  adapter: postgresql
+  database: daltoon_staging

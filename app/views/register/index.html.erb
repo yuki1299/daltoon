@@ -1,0 +1,24 @@
+<section id="register" class="content">
+	<div class="logo-box">
+		<%= image_tag("daltoon-logo.png") %>
+	</div>
+	
+	<article class="register-container">
+		<div class="register-container-shadow"></div>
+		<h1>Registro</h1>
+
+		<form action="">
+			<label for="name">Nome</label>
+      <input type="text" id="name" name="name" required />
+      <label for="username">E-mail</label>
+      <input type="email" id="email" name="email" required />
+			<label for="username">Usuário</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required />
+	  </form>
+
+	  <button class="confirm">OK</button>
+	  <%= link_to "Login", root_path%>
+	</article>
+</section>
