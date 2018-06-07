@@ -7,18 +7,14 @@
 		<div class="register-container-shadow"></div>
 		<h1>Registro</h1>
 
-		<form action="">
-			<label for="name">Nome</label>
-      <input type="text" id="name" name="name" required />
-      <label for="username">E-mail</label>
-      <input type="email" id="email" name="email" required />
-			<label for="username">Usuário</label>
-      <input type="text" id="username" name="username" required />
-      <label for="password">Senha</label>
-      <input type="password" id="password" name="password" required />
-	  </form>
+		 <%= form_for @teacher, url: teacher_registration_path do |f| %>
+          <%= f.text_field :name, placeholder: "Nome" %>
+          <%= f.text_field :email, placeholder: "Email" %>
+          <%= f.text_field :password, placeholder: "Senha" %>
+          <%= f.text_field :password_confirmation, placeholder: "Confirmacao de Senha" %>
+          <%= f.submit "Registrar", class: "confirm" %>
+      <% end %>
 
-	  <button class="confirm">OK</button>
 	  <%= link_to "Login", root_path%>
 	</article>
 </section>

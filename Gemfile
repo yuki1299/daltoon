@@ -31,6 +31,7 @@ gem 'rack-cors',              require: 'rack/cors'
 gem 'rails-i18n',             '5.1.1'
 gem 'truncate_html'
 gem 'devise_token_auth'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
