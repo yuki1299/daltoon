@@ -1,39 +1,14 @@
 #login {
-  display: flex;
-  align-items: center;
-  height: 100%;
-
-  .logo-box {
-    @include span-columns (4 of 12);
-    @include shift (1 of 12);
-    margin-top: 16%;
-    align-self: flex-start;
-
-    img {
-      @include span-columns (4 of 4);
-    }
-  }
-
-  .login-container-shadow {
-    @include span-columns (5 of 12);
-    height: 36em;
-    z-index: -1;
-    right: 4.7%;
-    margin-top: 2vh;
-    position: absolute;
-    background: linear-gradient(to right, #FFA200 , #FFDC00);
-  }
-
   .login-container {
-    @include span-columns (5 of 12);
-    @include shift (1 of 12);
+    @include span-columns (4 of 12);
+    @include shift (4 of 12);
     background-color: $blue;
-    height: 36em;
     padding: 5vh 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 19px;
 
     h1 {
       font-size: 26px;

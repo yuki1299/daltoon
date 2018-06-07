@@ -29,6 +29,19 @@ body {
   flex: 1;
 }
 
+.logo-header {
+  @include span-columns(4 of 12);
+  @include shift (4 of 12);
+  margin-top: 6%;
+  margin-bottom: 3%;
+
+  img {
+    width: 55%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 figure {
   margin: 0;
 }
