@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 	root :to => "login#index"
   get 'cadastro' => "register#index", as: :register
 
+  namespace :teacher, as: :professor  do
+    get 'estudantes-resultados' => "students_results#index", as: :students_results
+  end
+
   namespace :api do
   	namespace :v1 do
       post '/send_answer', to: 'questions#answer'
