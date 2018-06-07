@@ -1,0 +1,101 @@
+#register {
+  align-items: center;
+  height: 100%;
+  margin-bottom: 4%;
+
+  .register-container {
+    @include span-columns (4 of 12);
+    @include shift (4 of 12);
+    background-color: $blue;
+    padding: 7vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 19px;
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 2vh;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1,
+    label {
+      text-transform: uppercase;
+    }
+
+    label,
+    p {
+      color: #FFF;
+      align-self: flex-start;
+      margin-left: 14%;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      @include span-columns (3 of 4);
+      @include omega;
+      margin-bottom: 1.5vh;
+      border-radius: 10px;
+
+      &.toggle-button {
+        display: none;
+      }
+    }
+
+    .login-button-box {
+      @include span-columns (5 of 5);
+      @include omega;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+
+      input.submit {
+        width: 37%;
+        margin-top: 0vh;
+        padding: 1.3vh;
+        font-size: 26px;
+        color: $yellow;
+        border: solid 2px $yellow;
+        border-radius: 17px;
+      }
+    }
+
+    button.confirm {
+      @include span-columns (3 of 4);
+      @include omega;
+      height: 45px;
+      margin-top: 3vh;
+      margin-bottom: 10px;
+      padding: 0;
+      font-size: 26px;
+      color: $yellow;
+      border: solid 2px $yellow;
+      border-radius: 17px;
+    }
+
+    a {
+      color: #FFF;
+      margin-bottom: 15px;
+      font-size: 22px;
+
+      &:hover {
+        color: #FFF;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

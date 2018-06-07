@@ -1,0 +1,27 @@
+<section id="login" class="content">
+	<article class="login-container">
+		<div class="login-container-shadow"></div>
+		<h1>Login do professor</h1>
+
+		<form action="">
+			<label for="username">Usuário</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required />
+			
+			<div class="login-button-box">
+				<div class="forgot-password">
+					<p>Lembrar senha</p>
+		      <label class="switch">
+		        <input class="toggle-button" type="checkbox">
+		        <span class="slider round"></span>
+		      </label>
+	      </div>
+      	<input class="submit" type="submit" name="submitbutton" value="ACESSAR">
+	    </div>
+	  </form>
+
+	  <%= link_to "Registrar-se", professor_register_teacher_path%>
+	  <%= link_to "Esqueci a senha", "#"%>
+	</article>
+</section>

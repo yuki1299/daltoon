@@ -18,6 +18,11 @@
   @include wrapper;
 }
 
+html {
+  background: image-url('general_bg.png') no-repeat;
+  background-size: 104%;
+}
+
 body {
   overflow-x: hidden;
   display: flex;

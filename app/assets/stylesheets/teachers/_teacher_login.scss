@@ -1,0 +1,103 @@
+#login {
+  .login-container {
+    @include span-columns (4 of 12);
+    @include shift (4 of 12);
+    background-color: $blue;
+    padding: 7vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 19px;
+    margin-bottom: 6%;
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 5.5vh;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1,
+    label {
+      text-transform: uppercase;
+    }
+
+    label,
+    p {
+      color: #FFF;
+      align-self: flex-start;
+      margin-left: 14%;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      @include span-columns (3 of 4);
+      @include omega;
+      margin-bottom: 3.5vh;
+      border-radius: 10px;
+
+      &.toggle-button {
+        display: none;
+      }
+    }
+
+    .login-button-box {
+      @include span-columns (4 of 4);
+      @include omega;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      
+      .forgot-password {
+        width: 25%;
+        float: left;
+        margin-left: 14%;
+        @include omega;
+
+        p {
+          font-size: 12px;
+          margin-bottom: 0;
+          margin-left: 0;
+        }
+
+        .switch {
+          margin-top: 15px;
+          margin-left: 5%;
+        }
+      }
+
+      input.submit {
+        width: 40%;
+        margin-top: 0vh;
+        margin-right: 15%;
+        float: right;
+        padding: 1.3vh;
+        font-size: 26px;
+        color: $yellow;
+        border: solid 2px $yellow;
+        border-radius: 17px;
+      }
+    }
+
+    a {
+      color: #FFF;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: #FFF;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

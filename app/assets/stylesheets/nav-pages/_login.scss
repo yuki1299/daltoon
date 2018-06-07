@@ -1,9 +1,9 @@
-#login {
+#student-login {
   .login-container {
     @include span-columns (4 of 12);
     @include shift (4 of 12);
     background-color: $blue;
-    padding: 5vh 0;
+    padding: 9vh 0 13vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,8 +52,9 @@
     .login-button-box {
       @include span-columns (5 of 5);
       @include omega;
+      display: flex;
+      justify-content: center;
       margin-top: 10px;
-      margin-bottom: 45px;
       
       .forgot-password {
         width: 20%;
@@ -76,8 +77,6 @@
       input.submit {
         width: 37%;
         margin-top: 0vh;
-        margin-right: 21%;
-        float: right;
         padding: 1.3vh;
         font-size: 26px;
         color: $yellow;

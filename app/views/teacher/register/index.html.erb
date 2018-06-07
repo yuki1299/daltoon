@@ -1,0 +1,19 @@
+<section id="register" class="content">
+	<article class="register-container">
+		<h1>Registro</h1>
+
+		 <%= form_for @teacher, url: teacher_registration_path do |f| %>
+		 	<%= f.label :name, 'Nome' %>
+      <%= f.text_field :name %>
+      <%= f.label :email, 'Email' %>
+      <%= f.text_field :email %>
+      <%= f.label :password, 'Senha' %>
+      <%= f.text_field :password %>
+      <%= f.label :password_confirmation, 'Confirmação de senha' %>
+      <%= f.text_field :password_confirmation %>
+      <div class="login-button-box">
+	      <%= f.submit "Registrar", class: "submit" %>
+	    </div>
+    <% end %>
+	</article>
+</section>

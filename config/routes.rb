@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'Professor', at: 'auth'
   devise_for :teachers
 	root :to => "login#index"
-  get 'cadastro' => "register#index", as: :register
+
+  namespace :teacher, as: :professor  do
+    get 'login-professor'       => "teacher_login#index", as: :login_teacher
+    get 'cadastro'              => "register#index", as: :register_teacher
+    get 'estudantes-resultados' => "students_results#index", as: :students_results
+  end
 
   namespace :api do
   	namespace :v1 do
