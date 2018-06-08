@@ -37,11 +37,11 @@ body {
 .logo-header {
   @include span-columns(4 of 12);
   @include shift (4 of 12);
-  margin-top: 6%;
+  margin-top: 5%;
   margin-bottom: 3%;
 
   img {
-    width: 55%;
+    width: 45%;
     margin: 0 auto;
     display: block;
   }

@@ -3,6 +3,21 @@
   height: 100%;
   margin-bottom: 4%;
 
+  .bubble-top {
+    position: absolute;
+    width: 15%;
+    right: 32%;
+    top: -4%;
+    z-index: -1;
+  }
+
+  .bubble-bottom {
+    position: absolute;
+    width: 15%;
+    left: 31%;
+    bottom: 6%;
+  }
+
   .register-container {
     @include span-columns (4 of 12);
     @include shift (4 of 12);
