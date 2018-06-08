@@ -5,6 +5,7 @@
     right: 32%;
     top: -4%;
   }
+
   .bubble-bottom {
     position: absolute;
     width: 15%;
@@ -18,7 +19,7 @@
     border-radius: 9px;
     padding: .5% 3%;
     position: absolute;
-    top: -45%;
+    top: -38%;
     right: -5%;
   }
 
@@ -29,7 +30,7 @@
     right: -63px;
     z-index: -1;
   }
-  
+
   .login-container {
     @include span-columns (4 of 12);
     @include shift (4 of 12);

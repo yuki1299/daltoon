@@ -1,4 +1,39 @@
 #login {
+  .bubble-top {
+    position: absolute;
+    width: 15%;
+    right: 32%;
+    z-index: -1;
+    top: -4%;
+  }
+
+  .bubble-bottom {
+    position: absolute;
+    width: 15%;
+    left: 31%;
+    z-index: -1;
+    bottom: 6%;
+  }
+
+  .teacher-button {
+    background-color: #3B86FF;
+    color: white;
+    border-radius: 9px;
+    padding: .5% 3%;
+    position: absolute;
+    top: -38%;
+    z-index: -1;
+    right: -5%;
+  }
+
+  .bubble-top-access{
+    position: absolute;
+    width: 5%;
+    top: -212px;
+    right: -63px;
+    z-index: -1;
+  }
+
   .login-container {
     @include span-columns (4 of 12);
     @include shift (4 of 12);
