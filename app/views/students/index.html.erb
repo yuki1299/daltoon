@@ -1,0 +1,60 @@
+<section id="students-results" class="content">
+  <section class="class-container">
+    <h2 class="blue">PESQUISAR SALA</h2>
+    <div class="search-box">
+      <input type="text">
+      <%= image_tag("search-icon.png") %>
+    </div>
+
+    <article class="class-list">
+      <ul>
+        <% if @classrooms.empty? %>
+          <li>
+            Nenhuma classe criada
+          </li>
+        <%else%>
+          <% @classrooms.each do |classroom| %>
+            <%= link_to teacher_classroom_students_path(@teacher.id, classroom.id) do%>
+              <li>
+                <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
+              </li>
+            <%end%>
+          <%end%>
+        <%end%>
+      </ul>
+    </article>
+
+    <div class="add-class">
+      <%= link_to "ADICIONAR TURMA", new_teacher_classroom_path(@teacher.id) %>
+    </div>
+  </section>
+
+  <section class="class-results">
+    <div class="title-box">
+      <h2><%= "#{@classroom.school} - #{@classroom.slug}" %></h2>
+    </div>  
+    
+    <article class="students-list">
+     <ul>
+	     <% if @students.empty? %>
+	       <li>
+	         Nenhum aluno na turma
+	       </li>
+	     <%else%>
+	       <% @students.each do |classroom| %>
+	         <%= link_to teacher_classroom_students_path(@teacher.id, @classroom.id, student.id) do%>
+	           <li>
+	             <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
+	           </li>
+	         <%end%>
+	       <%end%>
+	     <%end%>
+	   </ul>
+      <button>ATIVAR CÓDIGO</button>
+    </article>
+
+    <article class="student-results">
+      <h2>Selecione um aluno</h2>
+    </article>
+  </section>
+</section>
