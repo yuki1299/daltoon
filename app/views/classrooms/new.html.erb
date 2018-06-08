@@ -35,17 +35,13 @@
     <h2>ADICIONAR TURMA</h2>
     
     <article class="form-add-class-box">
-      <%= form_for @teacher, url: teacher_registration_path do |f| %>
-        <%= f.label :name, 'Nome' %>
-        <%= f.text_field :name %>
-        <%= f.label :email, 'Email' %>
-        <%= f.text_field :email %>
-        <%= f.label :password, 'Senha' %>
-        <%= f.text_field :password %>
-        <%= f.label :password_confirmation, 'Confirmação de senha' %>
-        <%= f.text_field :password_confirmation %>
+      <%= form_for @classroom, url: teacher_classrooms_path do |f| %>
+        <%= f.label :school, 'Escola' %>
+        <%= f.text_field :school %>
+        <%= f.label :slug, 'Turma' %>
+        <%= f.text_field :slug %>
         <div class="login-button-box">
-          <%= f.submit "Registrar", class: "submit" %>
+          <%= f.submit "GERAR CÓDIGO", class: "submit" %>
         </div>
       <% end %>
     </article>

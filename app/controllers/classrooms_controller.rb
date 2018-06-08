@@ -10,12 +10,12 @@ class ClassroomsController < ApplicationController
   end
 
   def create
-    teacher = Teacher.find params[:teacher_id]
-    @classroom = teacher.classrooms.new(classroom_params)
+    @teacher = Teacher.find params[:teacher_id]
+    @classroom = @teacher.classrooms.new(classroom_params)
     generate_code
 
     if @classroom.save
-      render json: @classroom, serializer: ClassroomSerializer, status: 201
+      redirect_to professor_students_results_path(@teacher.id)
     else
       render json: { sucess: false, message: "Não foi possível criar a sala", error_message: @classroom.errors }, status: 400
     end
