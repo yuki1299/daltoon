@@ -6,7 +6,14 @@ Rails.application.routes.draw do
   namespace :teacher, as: :professor  do
     get 'login-professor'       => "teacher_login#index", as: :login_teacher
     get 'cadastro'              => "register#index", as: :register_teacher
-    get 'estudantes-resultados' => "students_results#index", as: :students_results
+    get '/:id/estudantes-resultados' => "students_results#index", as: :students_results
+  end
+
+  resources :teachers  do
+    resources :classrooms do
+      get '/students'            , to: 'students#index'
+      get '/students/:student_id', to: 'students#show'
+    end
   end
 
   get 'questions-1'  => 'questions#one'
