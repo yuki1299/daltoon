@@ -9,6 +9,19 @@ Rails.application.routes.draw do
     get 'estudantes-resultados' => "students_results#index", as: :students_results
   end
 
+  get 'questions-1'  => 'questions#one'
+  get 'questions-2'  => 'questions#two'
+  get 'questions-3'  => 'questions#three'
+  get 'questions-4'  => 'questions#four'
+  get 'questions-5'  => 'questions#five'
+  get 'questions-6'  => 'questions#six'
+  get 'questions-7'  => 'questions#seven'
+  get 'questions-8'  => 'questions#eight'
+  get 'questions-9'  => 'questions#nine'
+  get 'questions-10' => 'questions#ten'
+  get 'questions-11' => 'questions#eleven'
+  get 'send_question' => 'questions#send_question'
+
   namespace :api do
   	namespace :v1 do
       post '/send_answer', to: 'questions#answer'
