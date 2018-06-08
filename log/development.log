@@ -1,0 +1,424 @@
+  [1m[35m (76.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClassrooms (20180515012113)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "school" character varying, "slug" character varying, "code" character varying)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515012113"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudents (20180515012226)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (109.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "name" character varying)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515012226"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateModels (20180515014338)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE TABLE "models" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "Teacher" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_models_on_email" ON "models"  ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_models_on_reset_password_token" ON "models"  ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515014338"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateTeachers (20180515014834)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_teachers_on_email" ON "teachers"  ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_teachers_on_reset_password_token" ON "teachers"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515014834"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToTeachers (20180515015003)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "teachers" ADD "name" character varying[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515015003"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTeacherReferenceToClassrooms (20180515015140)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "classrooms" ADD "teacher_id" bigint[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_classrooms_on_teacher_id" ON "classrooms"  ("teacher_id")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "classrooms" ADD CONSTRAINT "fk_rails_33e9cf11b8"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515015140"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddClassroomReferenceToStudents (20180515015436)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "students" ADD "classroom_id" bigint[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_classroom_id" ON "students"  ("classroom_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_4fde1dad9c"
+FOREIGN KEY ("classroom_id")
+  REFERENCES "classrooms" ("id")
+[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515015436"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseTokenAuthCreateProfessors (20180515033519)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.8ms)[0m  [1m[35mCREATE TABLE "professors" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT 'f', "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "name" character varying, "nickname" character varying, "image" character varying, "email" character varying, "tokens" json, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_professors_on_email" ON "professors"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_professors_on_uid_and_provider" ON "professors"  ("uid", "provider")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_professors_on_reset_password_token" ON "professors"  ("reset_password_token")[0m
+  [1m[35m (33.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_professors_on_confirmation_token" ON "professors"  ("confirmation_token")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515033519"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExams (20180518052825)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE TABLE "exams" ("id" bigserial primary key)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180518052825"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20180518052913)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "description" character varying, "correct_answer" integer)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180518052913"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExamQuestions (20180518052944)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.1ms)[0m  [1m[35mCREATE TABLE "exam_questions" ("id" bigserial primary key, "answer" integer)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180518052944"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExamAndQuestionReferenceToExamQuestions (20180518053103)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "exam_questions" ADD "exam_id" bigint[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_exam_questions_on_exam_id" ON "exam_questions"  ("exam_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "exam_questions" ADD CONSTRAINT "fk_rails_b45b8182ff"
+FOREIGN KEY ("exam_id")
+  REFERENCES "exams" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "exam_questions" ADD "question_id" bigint[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_exam_questions_on_question_id" ON "exam_questions"  ("question_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "exam_questions" ADD CONSTRAINT "fk_rails_819be3c7b2"
+FOREIGN KEY ("question_id")
+  REFERENCES "questions" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180518053103"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStudentReferenceToExams (20180518060822)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "exams" ADD "student_id" bigint[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_exams_on_student_id" ON "exams"  ("student_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "exams" ADD CONSTRAINT "fk_rails_1a4a27a7a1"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180518060822"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAuthenticationTokenToTeachers (20180601225543)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "teachers" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_teachers_on_authentication_token" ON "teachers"  ("authentication_token")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180601225543"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-08 03:20:00.009727"], ["updated_at", "2018-06-08 03:20:00.009727"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:20:06 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 5702ms (Views: 5689.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-08 00:21:05 -0300
+  
+SyntaxError (/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+		if resource&.valid_password? params[:password]
+		             ^
+/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/teachers/login-professor" for 127.0.0.1 at 2018-06-08 00:21:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/teachers/login-professor"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/teachers/login-professor" for 127.0.0.1 at 2018-06-08 00:21:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/teachers/login-professor"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:21:29 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-08 00:21:45 -0300
+  
+SyntaxError (/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+		if resource&.valid_password? params[:password]
+		             ^
+/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/teacher/cadastro" for 127.0.0.1 at 2018-06-08 00:21:56 -0300
+Processing by Teacher::RegisterController#index as HTML
+  Rendering teacher/register/index.html.erb within layouts/application
+  Rendered teacher/register/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 42.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/teacher/cadastro" for 127.0.0.1 at 2018-06-08 00:22:20 -0300
+Processing by Teacher::RegisterController#index as HTML
+  Rendering teacher/register/index.html.erb within layouts/application
+  Rendered teacher/register/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:22:24 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-08 00:23:03 -0300
+  
+SyntaxError (/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+		if resource&.valid_password? params[:password]
+		             ^
+/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-08 00:24:21 -0300
+  
+SyntaxError (/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+		if resource&.valid_password?(params[:password])
+		             ^
+/Users/willtubarao/Documents/Projects/daltoon/app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/teacher/teacher_login_controller.rb:4: syntax error, unexpected '.'
+app/controllers/teacher/teacher_login_controller.rb:9: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-08 00:24:33 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 36.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:25:07 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:26:10 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1553ms (Views: 1549.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:26:36 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1560ms (Views: 1557.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 00:26:59 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1563ms (Views: 1559.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:27:16 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:33:54 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:03 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:06 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:06 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:06 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:06 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:34:10 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:36:26 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:41:37 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:41:40 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:47:18 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/estudantes-resultados" for 127.0.0.1 at 2018-06-08 00:59:23 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendered teacher/students_results/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
