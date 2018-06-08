@@ -1,0 +1,133 @@
+#students-results {
+  margin-bottom: 4%;
+
+  .class-list,
+  .class-results {
+    background-color: $blue;
+  }
+
+  .class-container {
+    @include span-columns (4 of 12);
+
+    .search-box {
+      border: solid 2px $yellow;
+      border-radius: 17px;
+      margin-bottom: 15px;
+      background-color: #FFF;
+      padding: 5px 0;
+      position: relative;
+
+      input {
+        height: 80%;
+        width: 80%;
+        border: none;
+        border-right: solid 2px $yellow;
+        border-top-left-radius: 17px;
+        border-bottom-left-radius: 17px;
+        margin-bottom: 0;
+      }
+
+      img {
+        position: absolute;
+        right: 5.8%;
+        top: 6px;
+        width: 9%;
+      }
+    }
+
+    .class-list {
+      border-radius: 14px;
+      padding: 30px 20px;
+      margin-bottom: 15px;
+
+      li {
+        color: #FFF;
+        text-align: center;
+        border-bottom: solid 2px $yellow;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .add-class {
+      button {
+        width: 100%;
+        border-radius: 11px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .class-results {
+    @include span-columns (8 of 12);
+    padding: 25px;
+    border-radius: 19px;
+
+    .title-box {
+      border-bottom: solid 2px $yellow;
+      margin-bottom: 20px;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+
+    .students-list {
+      width: 25%;
+      float: left;
+      border-right: solid 2px $yellow;
+      height: auto;
+
+      ul {
+        height: 350px;
+        overflow: hidden;
+      }
+
+      li {
+        color: #FFF;
+        margin-bottom: 15px;
+      }
+
+      button {
+        background-color: transparent;
+        font-size: 16px;
+        border-radius: 15px;
+        border: solid 2px $yellow;
+        color: $yellow;
+      }
+    }
+
+    .student-results {
+      h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .graph-results {
+        width: 50%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .questions-results {
+        width: 25%;
+        float: left;
+
+        li {
+          color: #FFF;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
