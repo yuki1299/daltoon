@@ -8,21 +8,17 @@
 
     <article class="class-list">
       <ul>
-        <li>
-          Escola 01 - Turma 01 - CÓDIGO 01
-        </li>
-
-        <li>
-          Escola 02 - Turma 02 - CÓDIGO 02
-        </li>
-
-        <li>
-          Escola 03 - Turma 03 - CÓDIGO 03
-        </li>
-
-        <li>
-          Escola 04 - Turma 04 - CÓDIGO 04
-        </li>
+        <% if @classrooms.empty? %>
+          <li>
+            Nenhuma classe criada
+          </li>
+        <%else%>
+          <% @classrooms.each do |classroom| %>
+            <li>
+              <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
+            </li>
+          <%end%>
+        <%end%>
       </ul>
     </article>
 
