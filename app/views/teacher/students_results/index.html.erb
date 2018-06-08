@@ -14,9 +14,11 @@
           </li>
         <%else%>
           <% @classrooms.each do |classroom| %>
-            <li>
-              <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
-            </li>
+            <%= link_to teacher_classroom_students_path(@teacher.id, classroom.id) do%>
+              <li>
+                <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
+              </li>
+            <%end%>
           <%end%>
         <%end%>
       </ul>
