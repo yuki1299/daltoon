@@ -54,10 +54,29 @@
     }
 
     .add-class {
-      button {
+      display: flex;
+      align-items: center;
+      background-color: $blue;
+      justify-content: center;
+      padding: 5px 0;
+      border-radius: 11px;
+
+      &:hover {
+        background-color: $yellow;
+        background: $yellow;
+          -o-transition:color .2s ease-out, background .1s ease-in;
+          -ms-transition:color .2s ease-out, background .1s ease-in;
+          -moz-transition:color .2s ease-out, background .1s ease-in;
+          -webkit-transition:color .2s ease-out, background .1s ease-in;
+          /* ...and now override with proper CSS property */
+          transition:color .2s ease-out, background .1s ease-in;
+      }
+
+      a {
         width: 100%;
-        border-radius: 11px;
         font-size: 20px;
+        color: #FFF;
+        text-align: center;
       }
     }
   }
