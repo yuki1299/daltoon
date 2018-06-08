@@ -22,7 +22,8 @@ class ClassroomsController < ApplicationController
   end
 
   def new
-    
+    @teacher = Teacher.find params[:teacher_id]
+    @classroom = @teacher.classrooms.new
   end
 
   def show

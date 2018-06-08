@@ -1,0 +1,53 @@
+<section id="students-results" class="content">
+  <section class="class-container">
+    <h2 class="blue">PESQUISAR SALA</h2>
+    <div class="search-box">
+      <input type="text">
+      <%= image_tag("search-icon.png") %>
+    </div>
+
+    <article class="class-list">
+      <ul>
+        <li>
+          Escola 01 - Turma 01 - CÓDIGO 01
+        </li>
+
+        <li>
+          Escola 02 - Turma 02 - CÓDIGO 02
+        </li>
+
+        <li>
+          Escola 03 - Turma 03 - CÓDIGO 03
+        </li>
+
+        <li>
+          Escola 04 - Turma 04 - CÓDIGO 04
+        </li>
+      </ul>
+    </article>
+
+    <div class="add-class">
+      <%= link_to "ADICIONAR TURMA", new_teacher_classroom_path(@teacher.id) %>
+    </div>
+  </section>
+
+  <section class="class-results add-class-box">
+    <h2>ADICIONAR TURMA</h2>
+    
+    <article class="form-add-class-box">
+      <%= form_for @teacher, url: teacher_registration_path do |f| %>
+        <%= f.label :name, 'Nome' %>
+        <%= f.text_field :name %>
+        <%= f.label :email, 'Email' %>
+        <%= f.text_field :email %>
+        <%= f.label :password, 'Senha' %>
+        <%= f.text_field :password %>
+        <%= f.label :password_confirmation, 'Confirmação de senha' %>
+        <%= f.text_field :password_confirmation %>
+        <div class="login-button-box">
+          <%= f.submit "Registrar", class: "submit" %>
+        </div>
+      <% end %>
+    </article>
+  </section>
+</section>

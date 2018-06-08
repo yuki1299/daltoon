@@ -148,5 +148,37 @@
         }
       }
     }
+
+    &.add-class-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 20px;
+        margin: 30px 0;
+      }
+
+      .form-add-class-box {
+        width: 40%;
+
+        label {
+          color: #FFF;
+        }
+
+        input {
+          border-radius: 13px;
+        }
+
+        .login-button-box {
+          input {
+            font-size: 19px;
+            border: solid 2px $yellow;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
