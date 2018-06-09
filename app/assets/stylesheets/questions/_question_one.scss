@@ -1,2 +1,25 @@
 #question-one {
+  .answer {
+    width: 15%;
+    float: left;
+    background-color: red;
+    opacity: .4;
+    height: 125px;
+    position: absolute;
+    bottom: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .answer1 {
+    left: 23%;
+  }
+
+  .answer2 {
+    left: 42.7%;
+  }
+
+  .answer3 {
+    left: 62.5%;
+  }
 }
