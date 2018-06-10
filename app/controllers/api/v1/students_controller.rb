@@ -13,12 +13,12 @@ module Api
       end
 
       def create
-        @student = @classroom.students.new(student_params)
+        @student = @classroom.students.new(student_params) if @classroom.present?
 
-        if @student.save && @student.build_exam.save
-          render json: @student, serializer: StudentSerializer, status: 201
+        if @student.present? && @student.save && @student.build_exam.save
+          redirect_to questions_one_path(@student.id)
         else
-          render json: { sucess: false, message: "Não foi possível criar a sala", error_message: @student.errors }, status: 400
+          redirect_to root_path, alert: "Não foi possivel iniciar o teste"
         end
       end
 
@@ -53,7 +53,7 @@ module Api
       end
 
       def find_class_room
-        @classroom = params[:classroom_id].present? ? Classroom.find_by_id(params[:classroom_id]) :  Classroom.find_by_code(params[:code]) 
+        @classroom = Classroom.find_by_code(params[:student][:classroom_id]) 
       end
 
       def student_params

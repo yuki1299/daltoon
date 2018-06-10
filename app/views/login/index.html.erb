@@ -1,17 +1,16 @@
 <section id="student-login" class="content">
 	<article class="login-container">
-		<h1>Login</h1>
+		<h1>Login de Estudante</h1>
 
-		<form action="">
-			<label for="username">Nome</label>
-      <input type="text" id="username" name="username" required />
-      <label for="password">Inserir Código</label>
-      <input type="text" id="password" name="password" required />
-			
-			<div class="login-button-box">
-      	<input class="submit" type="submit" name="submitbutton" value="ACESSAR">
+		<%= form_for @student, url: api_v1_students_path do |f| %>
+			<%= f.label :name, 'Nome' %>
+      <%= f.text_field :name %>
+      <%= f.label :classroom_id, 'Inserir Código' %>
+      <%= f.text_field :classroom_id %>
+   	  <div class="login-button-box">
+   	  	<%= f.submit "GERAR CÓDIGO", class: "submit" %>
 	    </div>
-	  </form>
+		<%end%>
 	</article>
 	<%= image_tag("bubbles_top.png", class: "bubble-top") %>
 	<%= image_tag("bubbles_bottom.png", class: "bubble-bottom") %>

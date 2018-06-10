@@ -16,18 +16,18 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/student/:student_id/questions-1'  => 'questions#one'
-  get '/student/:student_id/questions-2'  => 'questions#two'
-  get '/student/:student_id/questions-3'  => 'questions#three'
-  get '/student/:student_id/questions-4'  => 'questions#four'
-  get '/student/:student_id/questions-5'  => 'questions#five'
-  get '/student/:student_id/questions-6'  => 'questions#six'
-  get '/student/:student_id/questions-7'  => 'questions#seven'
-  get '/student/:student_id/questions-8'  => 'questions#eight'
-  get '/student/:student_id/questions-9'  => 'questions#nine'
-  get '/student/:student_id/questions-10' => 'questions#ten'
-  get '/student/:student_id/questions-11' => 'questions#eleven'
-  get '/student/:student_id/send_question' => 'questions#send_question'
+  get '/student/:student_id/questions-1'  => 'questions#one', as: :questions_one
+  get '/student/:student_id/questions-2'  => 'questions#two', as: :questions_two
+  get '/student/:student_id/questions-3'  => 'questions#three', as: :questions_three
+  get '/student/:student_id/questions-4'  => 'questions#four', as: :questions_four
+  get '/student/:student_id/questions-5'  => 'questions#five', as: :questions_five
+  get '/student/:student_id/questions-6'  => 'questions#six', as: :questions_six
+  get '/student/:student_id/questions-7'  => 'questions#seven', as: :questions_seven
+  get '/student/:student_id/questions-8'  => 'questions#eight', as: :questions_eight
+  get '/student/:student_id/questions-9'  => 'questions#nine', as: :questions_nine
+  get '/student/:student_id/questions-10' => 'questions#ten', as: :questions_ten
+  get '/student/:student_id/questions-11' => 'questions#eleven', as: :questions_eleven
+  get '/student/:student_id/send_question' => 'questions#send_question', as: :send_question_student
 
   namespace :api do
   	namespace :v1 do
