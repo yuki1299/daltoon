@@ -15,38 +15,22 @@ module Api
       def create
         @student = @classroom.students.new(student_params) if @classroom.present?
 
-        if @student.present? && @student.save && @student.build_exam.save
+        if @student.present? && @student.save && create_questions
           redirect_to questions_one_path(@student.id)
         else
           redirect_to root_path, alert: "Não foi possivel iniciar o teste"
         end
       end
 
-      def update
-        if @student.update_attributes(student_params)
-          render json: @student, serializer: StudentSerializer, status: 302
-        else
-          render json: { sucess: false, message: "Não foi possível atualziar a sala", error_message: @student.errors }, status: 400
-        end
-      end
-
-      def show
-        if @student.present?
-          render json: @student, serializer: ProfessorStudentSerializer, status: 201
-        else
-          render json: { sucess: false, message: "Aluno não encontrada!" }, status: 400
-        end
-      end
-
-      def destroy
-        if @student.destroy
-          render json: { sucess: true, message: "Sala deletada com sucesso!" }, status: 201
-        else
-          render json: { sucess: false, message: "Sala foi possível deletar a sala!" }, status: 400
-        end
-      end
-
       private
+
+      def create_questions
+        arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        arr.each do |question_number|
+          @student.questions.create(number: question_number, description: "question-#{question_number}")
+        end
+        true
+      end
 
       def load_student
         @student = Student.find_by_id params[:student_id]

@@ -3,11 +3,11 @@ module Api
     class QuestionsController < ApplicationController
       skip_before_action :verify_authenticity_token  
       def answer
-        student = Student.find_by_id params[:student_id]
-        if student.present? && params[:question_id].present? && params[:answer].present?
-          create_answer = ExamQuestion.new(exam: student.exam, question_id: params[:question_id], answer: params[:answer])
-          create_answer.save
-          render json: { sucess: true, message: "Resposta salva!" }, status: 201
+        find_student(params[:student_id])      
+        if @student.present?
+          find_question(params[:question]) 
+          @question.update_attributes(answer: params[:answer])
+          redirect_to "/student/#{params[:student_id]}/questions-#{params[:next_path]}"
         end 
       end
 
@@ -15,6 +15,14 @@ module Api
 
       def questions_params
         params.require(:classroom).permit!
+      end
+
+      def find_student id
+        @student = Student.find id
+      end
+
+      def find_question id
+        @question = @student.questions.find_by_number id
       end
     end
   end

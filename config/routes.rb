@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   namespace :api do
   	namespace :v1 do
-      post '/send_answer', to: 'questions#answer'
+      get '/send_answer', to: 'questions#answer'
   		resources :classrooms, only: [:index, :show, :create] do
         get '/students'            , to: 'students#index'
         get '/students/:student_id', to: 'students#show'

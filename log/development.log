@@ -195,3 +195,1178 @@ Processing by LoginController#index as HTML
 Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 2.7ms)
 
 
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-10 19:35:19 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TWdSOg0J/b5Cm2Em/4q77QCV9zsQ46fVwgijdQLuVQMr9in12gn7wH7VZnEfLFRau4s0GWtP1LNY+DTKmM7Fw==", "student"=>{"name"=>"123", "classroom_id"=>"BCOAIXQL"}, "commit"=>"GERAR CÓDIGO"}
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "BCOAIXQL"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "123"], ["classroom_id", 7]]
+  [1m[35m (54.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mExam Load (0.4ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."student_id" = $1 LIMIT $2[0m  [["student_id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "exams" ("student_id") VALUES ($1) RETURNING "id"[0m  [["student_id", 11]]
+  [1m[35m (45.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/11/questions-1
+Completed 302 Found in 152ms (ActiveRecord: 113.0ms)
+
+
+Started GET "/student/11/questions-1" for 127.0.0.1 at 2018-06-10 19:35:19 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"11"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-10 19:38:07 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TWdSOg0J/b5Cm2Em/4q77QCV9zsQ46fVwgijdQLuVQMr9in12gn7wH7VZnEfLFRau4s0GWtP1LNY+DTKmM7Fw==", "student"=>{"name"=>"123123", "classroom_id"=>"BCOAIXQL"}, "commit"=>"GERAR CÓDIGO"}
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "BCOAIXQL"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "123123"], ["classroom_id", 7]]
+  [1m[35m (75.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mExam Load (0.7ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" WHERE "exams"."student_id" = $1 LIMIT $2[0m  [["student_id", 12], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "exams" ("student_id") VALUES ($1) RETURNING "id"[0m  [["student_id", 12]]
+  [1m[35m (49.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/12/questions-1
+Completed 302 Found in 139ms (ActiveRecord: 127.4ms)
+
+
+Started GET "/student/12/questions-1" for 127.0.0.1 at 2018-06-10 19:38:07 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"12"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mQuestion Load (27.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" ORDER BY "exams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExam Load (0.9ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" ORDER BY "exams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" ORDER BY "exams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExam Load (0.6ms)[0m  [1m[34mSELECT  "exams".* FROM "exams" ORDER BY "exams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStudentReferenceToQuestions (20180610224447)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.5ms)[0m  [1m[35mALTER TABLE "questions" ADD "student_id" bigint[0m
+  [1m[35m (211.0ms)[0m  [1m[35mCREATE  INDEX  "index_questions_on_student_id" ON "questions"  ("student_id")[0m
+  [1m[35m (94.3ms)[0m  [1m[35mALTER TABLE "questions" ADD CONSTRAINT "fk_rails_d78ac03c88"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180610224447"]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (32.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNumberToQuestions (20180610224758)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "questions" ADD "number" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180610224758"]]
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 LIMIT $2[0m  [["student_id", 12], ["LIMIT", 11]]
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-1"], ["student_id", 12], ["number", 1]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-1"], ["student_id", 12], ["number", 1]]
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-1"], ["student_id", 12], ["number", 1]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-2"], ["student_id", 12], ["number", 2]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-3"], ["student_id", 12], ["number", 3]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-4"], ["student_id", 12], ["number", 4]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-5"], ["student_id", 12], ["number", 5]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-6"], ["student_id", 12], ["number", 6]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-7"], ["student_id", 12], ["number", 7]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-8"], ["student_id", 12], ["number", 8]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-9"], ["student_id", 12], ["number", 9]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-10"], ["student_id", 12], ["number", 10]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-11"], ["student_id", 12], ["number", 11]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 LIMIT $2[0m  [["student_id", 12], ["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 12]]
+Started GET "/" for 127.0.0.1 at 2018-06-10 20:45:10 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-10 20:45:18 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hLtuWNXhueSvdBH8zkad/ufsKLQ6Uy6QSAX2Ko4smfdVISu36r25/VeFKeGRxAZAOQBTuLO9n13SbjR0cEQbtA==", "student"=>{"name"=>"vinicius oliveira lima", "classroom_id"=>"BCOAIXQL"}, "commit"=>"GERAR CÓDIGO"}
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "BCOAIXQL"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "vinicius oliveira lima"], ["classroom_id", 7]]
+  [1m[35m (62.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-1"], ["student_id", 13], ["number", 1]]
+  [1m[35m (114.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-2"], ["student_id", 13], ["number", 2]]
+  [1m[35m (51.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-3"], ["student_id", 13], ["number", 3]]
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-4"], ["student_id", 13], ["number", 4]]
+  [1m[35m (105.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-5"], ["student_id", 13], ["number", 5]]
+  [1m[35m (52.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-6"], ["student_id", 13], ["number", 6]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-7"], ["student_id", 13], ["number", 7]]
+  [1m[35m (74.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-8"], ["student_id", 13], ["number", 8]]
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-9"], ["student_id", 13], ["number", 9]]
+  [1m[35m (63.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-10"], ["student_id", 13], ["number", 10]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "student_id", "number") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "question-11"], ["student_id", 13], ["number", 11]]
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-1
+Completed 302 Found in 773ms (ActiveRecord: 685.6ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 20:45:19 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 LIMIT $2[0m  [["student_id", 13], ["LIMIT", 11]]
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 13]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAnswerToQuestions (20180611001801)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180611001801"]]
+  [1m[35m (36.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:18:48 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (173.6ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `send_question_student' for #<#<Class:0x007f7582ca22a0>:0x007f7582ca0748>):
+    1: <section id="question-one" class="content question-container">
+    2:   <%= image_tag("questions/question_1.jpg") %>
+    3:   <%= link_to send_question_student(question: 1, answer: 1) do %>
+    4:  		<div class="answer answer1"></div>
+    5: 	<%end%>
+    6:  		<%= link_to send_question_student(question: 1, answer: 1) do %>
+  
+app/views/questions/one.html.erb:3:in `_app_views_questions_one_html_erb__422447434103404713_70071341094320'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:19:00 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:20:38 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&question=1" for 127.0.0.1 at 2018-06-10 21:20:39 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 13]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2[0m  [["student_id", 13], ["number", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "questions" SET "correct_answer" = $1 WHERE "questions"."id" = $2[0m  [["correct_answer", 1], ["id", 24]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 526132ms (ActiveRecord: 27.9ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/questions_controller.rb:26:in `send_question'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:29:38 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (457.0ms)
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `question_two_path' for #<#<Class:0x0055e1939829c8>:0x0055e193967740>):
+    1: <section id="question-one" class="content question-container">
+    2:   <%= image_tag("questions/question_1.jpg") %>
+    3:   <%= link_to send_question_student_path(question: 1, answer: 1, next_path: question_two_path) do %>
+    4:  		<div class="answer answer1"></div>
+    5: 	<%end%>
+    6:  		<%= link_to send_question_student_path(question: 1, answer: 1, next_path: question_two_path) do %>
+  
+app/views/questions/one.html.erb:3:in `_app_views_questions_one_html_erb__1347101739190770385_47213666114560'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:29:50 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:29:54 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/questions_controller.rb:40:in `find_question'
+app/controllers/questions_controller.rb:28:in `send_question'
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:30:22 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'answer' for Question.):
+  
+app/controllers/questions_controller.rb:29:in `send_question'
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:30:45 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37405ms (ActiveRecord: 0.8ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/questions_controller.rb:29:in `send_question'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAnswerToQuestions (20180611001801)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "questions" DROP "answer"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAnswerToQuestions (20180611001801)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180611001801"]]
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3326156250294110625)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAnswerToQuestions (20180611001801)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "questions" ADD "answer" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180611001801"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3326156250294110625)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:33:20 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000question_two_path
+Completed 302 Found in 15879ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:33:35 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000question_two_path
+Completed 302 Found in 2528ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-10 21:33:44 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:33:45 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000question_two_path
+Completed 302 Found in 2374ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:33:48 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000question_two_path
+Completed 302 Found in 2951ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-10 21:33:56 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000question_two_path
+Completed 302 Found in 3780ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:46:45 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:46:47 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 24]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 76ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:46:47 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:46:52 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:46:53 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:46:55 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:46:55 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:47:02 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/student/13/send_question?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:47:02 -0300
+Processing by QuestionsController#send_question as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:52:00 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:52:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/send_answer"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-11 12:52:21 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (27.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 64.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:53:06 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:53:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/send_answer"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:53:12 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:53:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/send_answer"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:53:21 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:53:35 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:53:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/send_answer"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:54:28 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:54:28 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:54:30 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1"}
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_student' for #<Api::V1::QuestionsController:0x007f89882445f0>):
+  
+app/controllers/api/v1/questions_controller.rb:6:in `answer'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:55:18 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:55:20 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 18ms (ActiveRecord: 5.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=):
+  
+app/controllers/api/v1/questions_controller.rb:21:in `find_student'
+app/controllers/api/v1/questions_controller.rb:6:in `answer'
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:55:33 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1"}
+Completed 500 Internal Server Error in 19443ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/api/v1/questions_controller.rb:6:in `answer'
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1" for 127.0.0.1 at 2018-06-11 12:56:25 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 4.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=):
+  
+app/controllers/api/v1/questions_controller.rb:21:in `find_student'
+app/controllers/api/v1/questions_controller.rb:6:in `answer'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:56:29 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (33875.9ms)
+Completed 500 Internal Server Error in 33880ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/views/questions/one.html.erb:3:in `_app_views_questions_one_html_erb__1347101739190770385_70114336797980'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:57:47 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:57:48 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 41ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:57:48 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:57:53 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000questions_two_path
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:58:11 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:58:13 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 19366ms (ActiveRecord: 2.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/api/v1/questions_controller.rb:10:in `answer'
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:58:40 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"two", :controller=>"questions"}, missing required keys: [:student_id]):
+  
+app/controllers/api/v1/questions_controller.rb:10:in `answer'
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:58:57 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-2
+Completed 302 Found in 24ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/student/13/questions-2" for 127.0.0.1 at 2018-06-11 12:58:58 -0300
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 12:59:52 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 12:59:54 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 9.3ms)
+
+
+  
+NameError (undefined local variable or method `student_id' for #<Api::V1::QuestionsController:0x007f89823f9ec8>):
+  
+app/controllers/api/v1/questions_controller.rb:10:in `answer'
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:00:19 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-1
+Completed 302 Found in 34ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:00:20 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:00:23 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-1
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:00:23 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:00:27 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 24]]
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-1
+Completed 302 Found in 35ms (ActiveRecord: 29.2ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:00:27 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:00:29 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 24]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-1
+Completed 302 Found in 23ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:00:29 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:00:39 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=question_two_path&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:00:41 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"question_two_path", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 24]]
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 26.9ms)
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/api/v1/questions_controller.rb:10:in `+'
+app/controllers/api/v1/questions_controller.rb:10:in `answer'
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:01:20 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=2&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:01:23 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"2", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 24]]
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-2
+Completed 302 Found in 70ms (ActiveRecord: 33.1ms)
+
+
+Started GET "/student/13/questions-2" for 127.0.0.1 at 2018-06-11 13:01:23 -0300
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 LIMIT $2[0m  [["student_id", 13], ["LIMIT", 11]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 LIMIT $2[0m  [["student_id", 13], ["LIMIT", 11]]
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["student_id", 13], ["LIMIT", 1]]
+Started GET "/student/13/questions-1" for 127.0.0.1 at 2018-06-11 13:01:58 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=2&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:01:59 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"2", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 24]]
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-2
+Completed 302 Found in 27ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/student/13/questions-2" for 127.0.0.1 at 2018-06-11 13:01:59 -0300
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["student_id", 13], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["student_id", 13], ["LIMIT", 1]]
+Started GET "/api/v1/send_answer?answer=2&next_path=2&question=1&student_id=13" for 127.0.0.1 at 2018-06-11 13:02:12 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"2", "question"=>"1", "student_id"=>"13"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 13], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 24]]
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/13/questions-2
+Completed 302 Found in 25ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/student/13/questions-2" for 127.0.0.1 at 2018-06-11 13:02:12 -0300
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"13"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["student_id", 13], ["LIMIT", 1]]
