@@ -54,7 +54,12 @@
     </article>
 
     <article class="student-results">
-      <h2>Selecione um aluno</h2>
+      <h2>Aluno: <%= @student.name%></h2>
+    Resultados:<br>
+    <% @student.questions.each do |question|%>
+	    Questão - <%= question.number%>
+	    Resposta - <%= question.answer.present? ? question.answer : "não respondeu"%><br>
+    <%end%>
     </article>
   </section>
 </section>

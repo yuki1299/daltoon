@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :teachers  do
     resources :classrooms do
       get '/students'            , to: 'students#index'
-      get '/students/:student_id', to: 'students#show'
+      get '/students/:student_id', to: 'students#show', as: :student_show
     end
   end
 
