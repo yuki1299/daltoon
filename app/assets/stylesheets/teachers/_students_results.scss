@@ -190,6 +190,21 @@
           align-items: center;
           justify-content: space-between;
 
+          &.locked {
+            p {
+              text-decoration: line-through;
+              color: #4D4D4D;
+            }
+            
+            .answers-box {
+              .wrong-question,
+              .right-question {
+                border: solid 2px #929493;
+                background-color: #4D4D4D;
+              }
+            }
+          }
+
           p {
             margin-bottom: 0;
             float: left;
