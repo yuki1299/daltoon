@@ -115,3 +115,9 @@ textarea {
 .with-six-columns {
   @include span-columns (4 of 24);
 }
+
+.play_video{
+  position: absolute;
+  top: 10px;
+  left: 2%;
+}
