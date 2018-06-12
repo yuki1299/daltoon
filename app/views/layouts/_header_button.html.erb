@@ -1,11 +1,12 @@
 <!-- STUDENT SCREEN -->
 <div class="nav-button-header">
-  <%= link_to "ACESSAR COMO PROFESSOR", professor_login_teacher_path, class: "teacher-button"%>
+	<%#binding.pry%>
+	<% if params[:controller] == "teacher/teacher_login" %>
+		<%= link_to "ACESSAR COMO ALUNO", root_path, class: "teacher-button"%>
+	<%elsif params[:controller].present? && params[:controller] == "teacher/students_results" && params[:id].present? || params[:teacher_id].present? %>
+		<%= link_to "FINALIZAR SESSÃO", root_path, class: "teacher-button"%>
+	<%else%>
+		<%= link_to "ACESSAR COMO PROFESSOR", professor_login_teacher_path, class: "teacher-button"%>
+	<%end%>
   <%= image_tag("bubbles_top.png", class: "bubble-top-access") %>
 </div>
-
-<!-- TEACHER SCREEN -->
-<!-- <div>
-  <%= link_to "ACESSAR COMO ALUNO", root_path, class: "teacher-button"%>
-  <%= image_tag("bubbles_top.png", class: "bubble-top-access") %>
-</div> -->
