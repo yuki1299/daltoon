@@ -5,7 +5,7 @@
     position: absolute;
     width: 15%;
     right: 32%;
-    top: -4.7%;
+    top: -4.5%;
     z-index: -1;
   }
 
@@ -13,7 +13,7 @@
     position: absolute;
     width: 15%;
     left: 31%;
-    bottom: -6.8%;
+    bottom: -5.8%;
   }
 
   .teacher-button {
@@ -38,7 +38,7 @@
     @include span-columns (4 of 12);
     @include shift (4 of 12);
     background-color: $blue;
-    padding: 9vh 0 13vh;
+    padding: 7.1vh 0 17.4vh;
     display: flex;
     align-items: center;
     justify-content: center;

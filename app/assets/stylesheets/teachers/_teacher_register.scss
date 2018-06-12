@@ -15,14 +15,14 @@
     position: absolute;
     width: 15%;
     left: 31%;
-    bottom: 6%;
+    bottom: 5%;
   }
 
   .register-container {
     @include span-columns (4 of 12);
     @include shift (4 of 12);
     background-color: $blue;
-    padding: 7vh 0;
+    padding: 7vh 0 5.8vh;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -34,6 +34,26 @@ body {
   flex: 1;
 }
 
+.nav-button-header {
+  float: right;
+  background-color: $blue;
+  border-radius: 19px;
+  margin-top: 2%;
+  width: 25%;
+  padding: 10px 20px 10px 40px;
+
+  a {
+    color: #FFF;
+  }
+
+  img {
+    width: 5%;
+    position: absolute;
+    right: -1.6%;
+    top: 23px;
+  }
+}
+
 .logo-header {
   @include span-columns(4 of 12);
   @include shift (4 of 12);
