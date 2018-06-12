@@ -1,6 +1,12 @@
+<div id="modal">
+  <iframe src="https://www.youtube.com/embed/A7qGNzzqXA4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 <section id="question-one" class="content question-container">
   <%= image_tag("questions/question_1.jpg") %>
-  <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <%= link_to "#modal", :class => "fancybox" do %>
+    <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <% end %>
   <%= image_tag("questions/help_button.png", class: "help_button") %>
   <%= image_tag("questions/hint_question_1.png", class: "hint_button") %>
   <div class="question-text">
@@ -16,15 +22,3 @@
   	<div class="answer answer3"></div>
 	<%end%>
 </section>
-
-<div id="modal">
-  <p>
-    <b>AVISO</b>
-  </p>
-  <p>
-    <b>Resolução CNPE Nº 23 de 09 de novembro de 2017</b>
-  </p>
-  <p>
-    Art. 1º Estabelecer a adição obrigatória, em volume, de dez por cento de biodiesel ao óleo diesel vendido ao consumidor final, em qualquer parte do território nacional, a partir de 1º de março de 2018, nos termos do art. 1º, inciso III, da Lei nº 13.033, de 24 de setembro de 2014.
-  </p>
-</div>
