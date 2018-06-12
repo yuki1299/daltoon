@@ -27,7 +27,7 @@ module Api
       def create_questions
         arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
         arr.each do |question_number|
-          @student.questions.create(number: question_number, description: "question-#{question_number}")
+          @student.questions.create(number: question_number, description: "question-#{question_number}", correct_answer: 1)
         end
         true
       end
