@@ -268,6 +268,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      height: 509px;
 
       h2 {
         font-size: 20px;
@@ -286,6 +287,8 @@
         }
 
         .login-button-box {
+          margin-top: 30px;
+          
           input {
             font-size: 19px;
             border: solid 2px $yellow;
