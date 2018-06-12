@@ -55,11 +55,38 @@
 
     <article class="student-results">
       <h2>Aluno: <%= @student.name%></h2>
-    Resultados:<br>
-    <% @student.questions.each do |question|%>
-	    Questão - <%= question.number%>
-	    Resposta - <%= question.answer.present? ? question.answer : "não respondeu"%><br>
-    <%end%>
-    </article>
+      <article class="graph-results">
+        <div class="circles-box">
+          <div class="correct-circles-box" style="flex: <%= @student.correct_answers == 0 ? 1 : @student.correct_answers; %>;">
+            <div class="wrong-circle set-height-wrong">
+              <p><%= @student.correct_answers %></p>
+            </div>
+          </div>
+
+          <div class="correct-circles-box" style="flex: <%= @student.wrong_answers == 0 ? 1 : @student.wrong_answers; %>;">
+            <div class="correct-circle set-height-correct">
+              <p><%= @student.wrong_answers %></p>
+            </div>
+          </div>
+        </div>
+
+        <h3>
+          <%= @student.calculate_percentage_wrong %> de chance de ter DALTONISMO
+        </h3>
+      </article>
+
+      <article class="questions-results">
+        <ul>
+          <% @student.questions.order(number: :asc).each do |question|%>
+            <li>
+              <p> Pergunta <%= question.number%> </p>
+              <div class="answers-box">
+                <div class="wrong-question <%= 'active' if question.answer.present? &&question.answer != question.correct_answer %>" ></div>
+                <div class="right-question <%= 'active' if question.answer.present? &&question.answer == question.correct_answer %>" ></div>
+              </div>
+            </li>
+          <%end%>
+        </ul>
+      </article>
   </section>
 </section>

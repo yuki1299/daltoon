@@ -20,7 +20,6 @@ gem 'devise'
 gem 'active_model_serializers'
 
 gem 'normalize-rails',        '3.0.3'
-gem 'jquery-rails'
 gem 'bourbon',                '4.2.6'
 gem 'neat',                   '1.7.2'
 gem 'bitters',                '1.1.0'

@@ -135,13 +135,17 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 340px;
         justify-content: space-between;
+        padding: 0 20px;
         
         .circles-box {
           height: 230px;
-          width: 230px;
+          width: 100%;
           float: left;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 18%;
 
           .correct-circle,
           .wrong-circle {
@@ -150,6 +154,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100%;
 
             p {
               margin-bottom: 0;
@@ -161,11 +166,11 @@
 
           .correct-circle {
             background-color: #FFA200;
-            margin-top: 40%;
           }
 
           .wrong-circle {
             background-color: #BFFF33;
+            float: right;
           }
         }
 
