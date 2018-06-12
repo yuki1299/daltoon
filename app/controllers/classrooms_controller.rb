@@ -1,5 +1,4 @@
 class ClassroomsController < ApplicationController
-
   before_action :load_classroom, only: [:update, :show, :destroy]
   skip_before_action :verify_authenticity_token  
 
@@ -24,6 +23,7 @@ class ClassroomsController < ApplicationController
   def new
     @teacher = Teacher.find params[:teacher_id]
     @classroom = @teacher.classrooms.new
+    @classrooms = @teacher.classrooms.collect{ |classroom| classroom if classroom.id.present? }.compact
   end
 
   def show
