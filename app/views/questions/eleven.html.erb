@@ -16,6 +16,9 @@
     <%= image_tag("questions/play_video_button.png", class: "play_video") %>
   <% end %>
   <%= image_tag("questions/help_button.png", class: "help_button") %>
+  <div class="question-text">
+    <p>Insira aqui a pergunta da respectiva questão???? Insira aqui a pergunta da respectiva questão????</p>
+  </div>
   <%= link_to api_v1_send_answer_path(question: 11, answer: 1, student_id: params[:student_id], next_path: "finish_test") do %>
   	<div class="answer answer1"></div>
 	<%end%>
