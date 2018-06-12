@@ -7,7 +7,11 @@ module Api
         if @student.present?
           find_question(params[:question]) 
           @question.update_attributes(answer: params[:answer])
-          redirect_to "/student/#{params[:student_id]}/questions-#{params[:next_path]}"
+          if params[:next_path] == "finish_test"
+            redirect_to finish_test_student_path 
+          else
+            redirect_to "/student/#{params[:student_id]}/questions-#{params[:next_path]}"
+          end
         end 
       end
 
