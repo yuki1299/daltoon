@@ -1,6 +1,12 @@
 <section id="question-seven" class="content question-container">
   <%= image_tag("questions/question_7_2.jpg") %>
-  <div class="answer answer4"></div>
-  <div class="answer answer5"></div>
-  <div class="answer answer6"></div>
+  <%= link_to api_v1_send_answer_path(question: 2, answer: 5, student_id: params[:student_id], next_path: 3) do %>
+	  <div class="answer answer4"></div>
+	<%end%>
+	<%= link_to api_v1_send_answer_path(question: 2, answer: 6, student_id: params[:student_id], next_path: 3) do %>
+	  <div class="answer answer5"></div>
+	<%end%>
+	<%= link_to api_v1_send_answer_path(question: 2, answer: 1, student_id: params[:student_id], next_path: 3) do %>
+	  <div class="answer answer6"></div>
+	<%end%>
 </section>
