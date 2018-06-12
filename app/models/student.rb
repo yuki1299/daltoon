@@ -17,13 +17,13 @@ class Student < ActiveRecord::Base
 
 	def calculate_percentage_wrong
 		answered_questions = self.questions.collect{ |question| question if question.answer.present? }.compact.count
-		percentage = (wrong_answers / answered_questions) * 100
-		"#{percentage}%"
+		percentage = (wrong_answers.to_f/answered_questions.to_f) * 100
+		"#{percentage.round(2)}%"
 	end
 
 	def calculate_percentage_correct
 		answered_questions = self.questions.collect{ |question| question if question.answer.present? }.compact.count
-		percentage = (correct_answers / answered_questions) * 100
-		"#{percentage}%"
+		percentage = (correct_answers.to_f / answered_questions.to_f) * 100
+		"#{percentage.round(2)}%"
 	end
 end
