@@ -3,4 +3,7 @@
   <%= link_to api_v1_send_answer_path(question: 4, answer: 2, student_id: params[:student_id], next_path: 5) do %>
   	<div class="answer answer1"></div>
 	<%end%>
+	<%= link_to questions_four_one_path(student_id: params[:student_id]) do %>
+  	<%= image_tag("questions/other_page_button.png", class: 'not_here') %>
+	<%end%>
 </section>
