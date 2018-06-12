@@ -1,10 +1,10 @@
 #question-seven {
   .answer {
-    width: 25%;
+    width: 16%;
     float: left;
     background-color: red;
     opacity: .4;
-    height: 290px;
+    height: 320px;
     position: absolute;
     bottom: 240px;
     border-radius: 20px;
@@ -12,12 +12,41 @@
   }
 
   .answer1 {
-    left: 20%;
-    bottom: 210px;
+    left: 18%;
+    bottom: 32px;
+    transform: rotate(50deg);
   }
 
   .answer2 {
-    left: 58.6%;
-    bottom: 200px;  
+    left: 48.6%;
+    bottom: 50px;
+    height: 250px; 
+  }
+
+  .answer3 {
+    left: 73.6%;
+    bottom: 40px;
+    height: 290px;
+    transform: rotate(-20deg); 
+  }
+
+  .answer4 {
+    left: 13.6%;
+    bottom: 60px;
+    height: 250px;  
+  }
+
+  .answer5 {
+    left: 36.6%;
+    bottom: 70px;
+    height: 250px;
+    width: 21%;  
+  }
+
+  .answer6 {
+    left: 61.6%;
+    bottom: 60px;
+    height: 250px;
+    width: 20%; 
   }
 }
