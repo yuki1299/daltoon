@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   get '/student/:student_id/questions-9'  => 'questions#nine', as: :questions_nine
   get '/student/:student_id/questions-10' => 'questions#ten', as: :questions_ten
   get '/student/:student_id/questions-11' => 'questions#eleven', as: :questions_eleven
-  get '/student/:student_id/send_question' => 'questions#send_question', as: :send_question_student
+  get '/student/:student_id/finish_test' => 'questions#finish_test', as: :finish_test_student
 
   namespace :api do
   	namespace :v1 do

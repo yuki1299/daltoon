@@ -47,7 +47,7 @@ class QuestionsController < ApplicationController
   def seven_one
   end
 
-  def send_question
+  def finish_test
     
   end
   
