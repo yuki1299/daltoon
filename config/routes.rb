@@ -18,11 +18,21 @@ Rails.application.routes.draw do
 
   get '/student/:student_id/questions-1'  => 'questions#one', as: :questions_one
   get '/student/:student_id/questions-2'  => 'questions#two', as: :questions_two
+  get '/student/:student_id/questions-2-1'  => 'questions#two_one', as: :questions_two_one
+
   get '/student/:student_id/questions-3'  => 'questions#three', as: :questions_three
+  get '/student/:student_id/questions-3-1'  => 'questions#three_one', as: :questions_three_one
+
   get '/student/:student_id/questions-4'  => 'questions#four', as: :questions_four
+  get '/student/:student_id/questions-4-1'  => 'questions#four_one', as: :questions_four_one
+
   get '/student/:student_id/questions-5'  => 'questions#five', as: :questions_five
   get '/student/:student_id/questions-6'  => 'questions#six', as: :questions_six
+  get '/student/:student_id/questions-6-1'  => 'questions#six_one', as: :questions_six_one
+
   get '/student/:student_id/questions-7'  => 'questions#seven', as: :questions_seven
+  get '/student/:student_id/questions-7-1'  => 'questions#seven_one', as: :questions_seven_one
+  
   get '/student/:student_id/questions-8'  => 'questions#eight', as: :questions_eight
   get '/student/:student_id/questions-9'  => 'questions#nine', as: :questions_nine
   get '/student/:student_id/questions-10' => 'questions#ten', as: :questions_ten

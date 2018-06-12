@@ -32,9 +32,25 @@ class QuestionsController < ApplicationController
   def eleven
   end
 
+  def two_one
+  end
+
+  def three_one
+  end
+
+  def four_one
+  end
+
+  def six_one
+  end
+
+  def seven_one
+  end
+
   def send_question
     
   end
+  
 
   private
 
