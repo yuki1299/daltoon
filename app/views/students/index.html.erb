@@ -13,7 +13,7 @@
             Nenhuma classe criada
           </li>
         <%else%>
-          <% @classrooms.each do |classroom| %>
+          <% @classrooms.order(school: :asc).each do |classroom| %>
             <%= link_to teacher_classroom_students_path(@teacher.id, classroom.id) do%>
               <li>
                 <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
@@ -41,7 +41,7 @@
 	         Nenhum aluno na turma
 	       </li>
 	     <%else%>
-	       <% @students.each do |student| %>
+	       <% @students.order(name: :asc).each do |student| %>
 	         <%= link_to teacher_classroom_student_show_path(@teacher.id, @classroom.id, student.id) do%>
 	           <li>
 	             <%= "#{student.name}" %>
