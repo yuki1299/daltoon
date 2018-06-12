@@ -30,33 +30,6 @@ body {
   flex-direction: column;
 }
 
-.nicescroll-rails {
-  width: 8px !important;
-  z-index: auto;
-  background: rgb(208, 208, 208);
-  cursor: default;
-  position: absolute;
-  top: 333.891px;
-  left: 445.5px;
-  height: 296px;
-  display: block;
-  opacity: 0;
-  border-radius: 5px;
-
-  .nicescroll-cursors {
-    position: relative;
-    top: 0px;
-    right: 1px;
-    float: right;
-    width: 6px;
-    height: 179px;
-    background-color: rgb(109, 156, 230);
-    border: 0px;
-    background-clip: padding-box;
-    border-radius: 5px;
-  }
-}
-
 .site-content {
   flex: 1;
 }
@@ -147,4 +120,10 @@ textarea {
   position: absolute;
   top: 10px;
   left: 2%;
+}
+
+.help_button{
+  position: absolute;
+  top: 10px;
+  right: 2%;
 }

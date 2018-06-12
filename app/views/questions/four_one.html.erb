@@ -1,6 +1,7 @@
 <section id="question-four" class="content question-container">
   <%= image_tag("questions/question_4_2.jpg") %>
   <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <%= image_tag("questions/help_button.png", class: "help_button") %>
   <%= link_to api_v1_send_answer_path(question: 4, answer: 3, student_id: params[:student_id], next_path: 5) do %>
   	<div class="answer answer2"></div>
 	<%end%>
