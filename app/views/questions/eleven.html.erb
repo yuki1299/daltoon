@@ -1,6 +1,20 @@
+<div id="modal">
+    <p>
+      <b>AVISO</b>
+    </p>
+    <p>
+      <b>Resolução CNPE Nº 23 de 09 de novembro de 2017</b>
+    </p>
+    <p>
+      Art. 1º Estabelecer a adição obrigatória, em volume, de dez por cento de biodiesel ao óleo diesel vendido ao consumidor final, em qualquer parte do território nacional, a partir de 1º de março de 2018, nos termos do art. 1º, inciso III, da Lei nº 13.033, de 24 de setembro de 2014.
+    </p>
+</div>
+
 <section id="question-eleven" class="content question-container">
   <%= image_tag("questions/question_11.jpg") %>
-  <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <%= link_to "#modal", :class => "fancybox" do %>
+    <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <% end %>
   <%= image_tag("questions/help_button.png", class: "help_button") %>
   <%= link_to api_v1_send_answer_path(question: 11, answer: 1, student_id: params[:student_id], next_path: "finish_test") do %>
   	<div class="answer answer1"></div>

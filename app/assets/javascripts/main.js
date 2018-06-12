@@ -11,4 +11,13 @@ $(document).ready(function($){
       background:"#d0d0d0",
     });
   });
+
+  $(".fancybox").fancybox({
+    openEffect  : 'easyIn',
+    closeEffect : 'none',
+  });
+
+  setTimeout(function(){
+    $.fancybox.open($('#modal'));
+  }, 3*1000)
 });

@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all'%>
 	
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" type="text/css" media="screen" />
 
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,9 @@
 	  </footer>
 
 	  <!-- JAVASCRIPTS -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
     <%= javascript_include_tag "application" %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   </body>
 </html>
