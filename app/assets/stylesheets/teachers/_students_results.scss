@@ -39,6 +39,12 @@
       border-radius: 14px;
       padding: 30px 20px;
       margin-bottom: 15px;
+      height: 356px;
+
+      ul {
+        height: 100%;
+        overflow: auto;
+      }
 
       a {
         margin-bottom: 15px;
@@ -108,8 +114,9 @@
       height: auto;
 
       ul {
-        height: 350px;
-        overflow: hidden;
+        height: 320px;
+        margin-bottom: 13%;
+        overflow: auto;
       }
 
       li {
@@ -199,6 +206,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          margin-left: 10%;
 
           &.locked {
             p {
