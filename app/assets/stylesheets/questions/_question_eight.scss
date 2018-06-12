@@ -1,3 +1,53 @@
 #question-eight {
-  
+  .answer {
+    width: 5%;
+    float: left;
+    background-color: red;
+    opacity: .4;
+    height: 30px;
+    position: absolute;
+    bottom: 240px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .answer1 {
+    left: 20%;
+    bottom: 210px;
+  }
+
+  .answer2 {
+    left: 58.6%;
+    bottom: 200px;  
+  }
+
+  .answer3 {
+    left: 58.6%;
+    bottom: 300px;  
+  }
+
+  .answer4 {
+    left: 58.6%;
+    bottom: 400px;  
+  }
+
+  .answer5 {
+    left: 58.6%;
+    bottom: 500px;  
+  }
+
+  .answer6 {
+    left: 58.6%;
+    bottom: 50px;  
+  }
+
+  .answer7 {
+    left: 58.6%;
+    bottom: 10px;  
+  }
+
+  .answer8 {
+    left: 58.6%;
+    bottom: 350px;  
+  }
 }

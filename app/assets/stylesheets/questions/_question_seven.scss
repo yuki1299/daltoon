@@ -1,3 +1,23 @@
 #question-seven {
-  
+  .answer {
+    width: 25%;
+    float: left;
+    background-color: red;
+    opacity: .4;
+    height: 290px;
+    position: absolute;
+    bottom: 240px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .answer1 {
+    left: 20%;
+    bottom: 210px;
+  }
+
+  .answer2 {
+    left: 58.6%;
+    bottom: 200px;  
+  }
 }

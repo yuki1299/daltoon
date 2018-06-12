@@ -1,3 +1,28 @@
 #question-four {
-  
+  .answer {
+    width: 10%;
+    float: left;
+    background-color: red;
+    opacity: .4;
+    height: 80px;
+    position: absolute;
+    bottom: 240px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .answer1 {
+    left: 32%;
+    bottom: 20px;
+  }
+
+  .answer2 {
+    left: 40%;
+    bottom: 20px;
+  }
+
+  .answer3 {
+    left: 0%;
+    bottom: 20px;
+  }
 }
