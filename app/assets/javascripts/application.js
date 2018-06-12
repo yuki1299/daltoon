@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require rails-ujs
 //= require main
+//= require jquery.nicescroll.min
 //= require filter_list
 //= require turbolinks
 //= require_tree .
