@@ -181,3 +181,21 @@ textarea {
   right: 31%;
   width: 36%;
 }
+
+// GENERAL BUBBLES
+#students-results {
+  .bubble-top {
+    width: 10%;
+    position: absolute;
+    right: -3%;
+    top: -20px;
+    z-index: -1;
+  }
+
+  .bubble-bottom {
+    width: 20%;
+    position: absolute;
+    right: -6%;
+    top: -3px;
+  }
+}

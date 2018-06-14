@@ -70,6 +70,7 @@
       justify-content: center;
       padding: 5px 0;
       border-radius: 11px;
+      position: relative;
 
       &:hover {
         background-color: $yellow;
@@ -269,6 +270,7 @@
       justify-content: center;
       flex-direction: column;
       height: 509px;
+      position: relative;
 
       h2 {
         font-size: 20px;
