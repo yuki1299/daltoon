@@ -29,3 +29,25 @@ Processing by Teacher::TeacherLoginController#index as HTML
 Completed 200 OK in 84ms (Views: 77.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-14 04:04:50 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (1.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 75.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-14 04:07:46 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header_button.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 80.5ms | ActiveRecord: 0.6ms)
+
+
