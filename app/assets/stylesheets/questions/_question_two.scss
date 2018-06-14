@@ -4,7 +4,7 @@
     float: left;
     background-color: red;
     opacity: .4;
-    height: 185px;
+    height: 30vh;
     position: absolute;
     bottom: 35px;
     border-radius: 20px;
@@ -13,28 +13,28 @@
 
   .answer1 {
     left: 29%;
-    top: 185px;
+    top: 26vh;
     transform: rotate(50deg);
   }
 
   .answer2 {
     left: 70%;
-    bottom: 0px;
+    bottom: -50px;
     transform: rotate(50deg);
   }
 
   .answer3 {
     left: 22%;
-    top: 343px;
+    top: 45vh;
     transform: rotate(130deg);
-    height: 220px;
+    height: 38vh;
   }
 
   .answer4 {
     left: 71%;
-    bottom: 180px;
+    bottom: 20vh;
     transform: rotate(130deg);
-    height: 210px;
+    height: 38vh;
   }
 
   .not_here{
