@@ -27,6 +27,9 @@
 	<%= link_to api_v1_send_answer_path(question: 3, answer: 6, student_id: params[:student_id], next_path: 4) do %>
 	  <div class="answer answer5"></div>
 	<%end%>
+    <%= link_to api_v1_send_answer_path(question: 3, answer: 11, student_id: params[:student_id], next_path: 4) do %>
+      <div class="answer answer11"></div>
+    <%end%>
 	<%= link_to questions_three_one_path(student_id: params[:student_id]) do %>
   	<%= image_tag("questions/other_page_button.png", class: 'not_here') %>
 	<%end%>

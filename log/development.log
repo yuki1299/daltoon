@@ -15159,3 +15159,377 @@ Processing by QuestionsController#three as HTML
 Completed 200 OK in 95ms (Views: 91.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/student/1/questions-1" for 127.0.0.1 at 2018-06-14 03:16:26 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:19:40 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header_button.html.erb (1.8ms)
+  Rendered layouts/_header.html.erb (7.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1773ms (Views: 1768.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:19:50 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:20:04 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2188ms (Views: 2184.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:20:09 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:20:23 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2198ms (Views: 2194.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:21:12 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1750ms (Views: 1746.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:21:34 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1708ms (Views: 1704.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-7" for 127.0.0.1 at 2018-06-14 03:22:07 -0300
+Processing by QuestionsController#seven as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/seven.html.erb within layouts/application
+  Rendered questions/seven.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 86ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-7" for 127.0.0.1 at 2018-06-14 03:26:28 -0300
+Processing by QuestionsController#seven as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/seven.html.erb within layouts/application
+  Rendered questions/seven.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1715ms (Views: 1712.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-7-1" for 127.0.0.1 at 2018-06-14 03:26:33 -0300
+Processing by QuestionsController#seven_one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/seven_one.html.erb within layouts/application
+  Rendered questions/seven_one.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 86ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-7-1" for 127.0.0.1 at 2018-06-14 03:27:34 -0300
+Processing by QuestionsController#seven_one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/seven_one.html.erb within layouts/application
+  Rendered questions/seven_one.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1623ms (Views: 1620.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-9" for 127.0.0.1 at 2018-06-14 03:27:44 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-9" for 127.0.0.1 at 2018-06-14 03:29:21 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1756ms (Views: 1752.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-11" for 127.0.0.1 at 2018-06-14 03:29:38 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-11" for 127.0.0.1 at 2018-06-14 03:29:57 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1863ms (Views: 1859.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-5" for 127.0.0.1 at 2018-06-14 03:30:13 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:30:18 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:31:36 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1640ms (Views: 1636.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:31:47 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:32:54 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1700ms (Views: 1697.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:33:10 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1733ms (Views: 1728.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:35:07 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1663ms (Views: 1660.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:36:04 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1682ms (Views: 1679.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:39:14 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1645ms (Views: 1642.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:39:58 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1688ms (Views: 1684.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3-1" for 127.0.0.1 at 2018-06-14 03:40:03 -0300
+Processing by QuestionsController#three_one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three_one.html.erb within layouts/application
+  Rendered questions/three_one.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3" for 127.0.0.1 at 2018-06-14 03:40:13 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3-1" for 127.0.0.1 at 2018-06-14 03:40:21 -0300
+Processing by QuestionsController#three_one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three_one.html.erb within layouts/application
+  Rendered questions/three_one.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-3-1" for 127.0.0.1 at 2018-06-14 03:42:46 -0300
+Processing by QuestionsController#three_one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/three_one.html.erb within layouts/application
+  Rendered questions/three_one.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1689ms (Views: 1685.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-8" for 127.0.0.1 at 2018-06-14 03:43:16 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-8" for 127.0.0.1 at 2018-06-14 03:43:51 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1693ms (Views: 1689.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-10" for 127.0.0.1 at 2018-06-14 03:44:03 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-10" for 127.0.0.1 at 2018-06-14 03:44:15 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1866ms (Views: 1862.2ms | ActiveRecord: 0.0ms)
+
+
