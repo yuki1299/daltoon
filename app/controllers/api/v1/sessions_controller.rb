@@ -6,7 +6,7 @@ module Api
 
 		  def create
 		  	resource = Teacher.find_by_email params[:email]
-		  	if resource&.valid_password? params[:password]
+		  	if resource.present? && resource.valid_password?(params[:password])
 		  		sign_in('teacher',resource)
 				  render json: { sucess: true, message: "Usuário Logado", email: resource.email, token: resource.authentication_token }, status: 200
 				else
@@ -16,7 +16,7 @@ module Api
 
 		  def destroy
 		  	teacher = Teacher.find_by_email params[:email]
-		  	sign_out teacher
+		  	redirect_to root_path if sign_out teacher
 		  end
 		end
 	end

@@ -13,7 +13,7 @@
             Nenhuma classe criada
           </li>
         <%else%>
-          <% @classrooms.order(school: :asc).each do |classroom| %>
+          <% @classrooms.each do |classroom| %>
             <%= link_to teacher_classroom_students_path(@teacher.id, classroom.id) do%>
               <li>
                 <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>

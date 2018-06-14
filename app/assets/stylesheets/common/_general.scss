@@ -9,6 +9,21 @@
   @include clearfix;
 }
 
+.message{
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.message[data-error='true']{
+  background-color: #F2CEAB;
+}
+
+.message[data-notice='true']{
+  background-color: #93D25F;
+}
+
 .content {
   @include container;
   width: 100%;

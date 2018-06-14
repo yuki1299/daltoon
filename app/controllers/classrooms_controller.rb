@@ -1,4 +1,4 @@
-class ClassroomsController < ApplicationController
+ class ClassroomsController < ApplicationController
   before_action :load_classroom, only: [:update, :show, :destroy]
   skip_before_action :verify_authenticity_token  
 
@@ -14,7 +14,7 @@ class ClassroomsController < ApplicationController
     generate_code
 
     if @classroom.save
-      redirect_to professor_students_results_path(@teacher.id)
+      redirect_to professor_students_results_path(@teacher.id), notice: "Classe criada com sucesso"
     else
       render json: { sucess: false, message: "Não foi possível criar a sala", error_message: @classroom.errors }, status: 400
     end
@@ -22,8 +22,8 @@ class ClassroomsController < ApplicationController
 
   def new
     @teacher = Teacher.find params[:teacher_id]
+    @classrooms = @teacher.classrooms.order(school: :asc).collect{ |classroom| classroom if classroom.id.present? }.compact
     @classroom = @teacher.classrooms.new
-    @classrooms = @teacher.classrooms.collect{ |classroom| classroom if classroom.id.present? }.compact
   end
 
   def show
