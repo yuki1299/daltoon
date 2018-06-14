@@ -11,13 +11,16 @@
 
 .message{
   color: white;
-  border-radius: 5px;
-  margin-bottom: 15px;
+  border-radius: 45px;
   text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  width: 30%;
 }
 
 .message[data-error='true']{
-  background-color: #F2CEAB;
+  background-color: #8C1717;
 }
 
 .message[data-notice='true']{
@@ -180,4 +183,23 @@ textarea {
   top: 10px;
   right: 31%;
   width: 36%;
+}
+
+// GENERAL BUBBLES
+#students-results {
+  .bubble-top {
+    width: 10%;
+    position: absolute;
+    right: -3%;
+    top: -20px;
+    z-index: -1;
+  }
+
+  .bubble-bottom {
+    width: 20%;
+    position: absolute;
+    right: -6%;
+    top: -3px;
+    z-index: -1;
+  }
 }

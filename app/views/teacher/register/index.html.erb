@@ -2,7 +2,7 @@
 	<article class="register-container">
 		<h1>Registro</h1>
 
-		 <%= form_for @teacher, url: teacher_registration_path do |f| %>
+		 <%= form_for @teacher, url: professor_register_teacher_post_path do |f| %>
 		 	<%= f.label :name, 'Nome' %>
       <%= f.text_field :name %>
       <%= f.label :email, 'Email' %>

@@ -16,7 +16,8 @@
     if @classroom.save
       redirect_to professor_students_results_path(@teacher.id), notice: "Classe criada com sucesso"
     else
-      render json: { sucess: false, message: "Não foi possível criar a sala", error_message: @classroom.errors }, status: 400
+      flash[:error] = "Não foi possível criar a classe"
+      redirect_to new_teacher_classroom_path(@teacher.id)
     end
   end
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :teacher, as: :professor  do
     get 'login-professor'       => "teacher_login#index", as: :login_teacher
     get 'cadastro'              => "register#index", as: :register_teacher
+    post 'new'              => "register#create", as: :register_teacher_post
     get '/:id/estudantes-resultados' => "students_results#index", as: :students_results
   end
 
