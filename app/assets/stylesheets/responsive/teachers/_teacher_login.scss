@@ -1,3 +1,149 @@
 // Iphone 5/6
-@include media ($mobile) {
+@include media ($tablet) {
+  #login {
+    .bubble-top {
+      display: none;
+    }
+
+    .bubble-bottom {
+      display: none;
+    }
+
+    .teacher-button {
+      display: none;
+
+      &.responsive {
+        color: $blue;
+        display: block;
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        border-radius: 50px;
+        font-size: 30px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+      }
+    }
+
+    .bubble-top-access{
+      display: none;
+    }
+
+    .login-container {
+      @include span-columns (12 of 12);
+      @include shift (0 of 12);
+      background-color: transparent;
+      padding: 7.1vh 0 17.4vh;
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 5.5vh;
+        color: $blue;
+        font-size: 46px !important;
+        font-weight: 500 !important;
+        text-align: center;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1,
+      label {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 36px;
+        font-weight: 300;
+      }
+
+      label,
+      p {
+        color: $blue;
+        align-self: flex-start;
+        margin-left: 22%;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        @include span-columns (7 of 12);
+        @include omega;
+        margin-bottom: 3.5vh;
+        height: 70px;
+        border-color: $blue;
+        border-radius: 30px;
+        font-size: 36px;
+        padding: 14px 5px 20px 20px;
+
+        &.toggle-button {
+          display: none;
+        }
+      }
+
+      .login-button-box {
+        @include span-columns (4 of 4);
+        @include omega;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        
+        .forgot-password {
+          width: 29%;
+          float: left;
+          margin-left: 23%;
+          margin-right: 0;
+
+          p {
+            font-size: 29px;
+            margin-bottom: 0;
+            margin-left: 0;
+          }
+
+          .switch {
+            margin-top: 25px;
+            margin-left: 5%;
+            width: 50%;
+            height: 17px;
+
+            .slider { 
+              
+            }
+          }
+        }
+
+        input.submit {
+          width: 25%;
+          margin-top: 1vh;
+          margin-right: 22%;
+          float: right;
+          padding: 1.3vh;
+          font-size: 26px;
+          color: $blue;
+          border: solid 2px #FFDC00;
+          border-radius: 30px;
+          background-color: $yellow;
+        }
+      }
+
+      a {
+        color: #FFF;
+        margin-bottom: 15px;
+
+        &:hover {
+          color: #FFF;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

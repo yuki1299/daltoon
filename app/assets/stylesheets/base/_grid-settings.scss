@@ -13,7 +13,7 @@ $visual-grid-index: front;
 $visual-grid-opacity: 0.2;
 
 // Define your breakpoints
-$tablet: new-breakpoint(max-width 800px 12);
+$tablet: new-breakpoint(max-width 1024px 12);
 $mobile: new-breakpoint(max-width 480px 12);
 $small-mobile: new-breakpoint(max-width 320px 12);
 $desktop: new-breakpoint(min-width 900px 12);

@@ -1,3 +1,118 @@
 // Iphone 5/6
-@include media ($mobile) {
+@include media ($tablet) {
+  #student-login {
+    margin-bottom: 6%;
+
+    .bubble-top {
+      display: none;
+    }
+
+    .bubble-bottom {
+      display: none;
+    }
+
+    .teacher-button {
+      display: none;
+
+      &.responsive {
+        display: block;
+        position: relative;
+        right: 0;
+        width: 59%;
+        height: 70px;
+        border-radius: 50px;
+        font-size: 30px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+      }
+    }
+
+    .bubble-top-access{
+      display: none;
+    }
+
+    .login-container {
+      @include span-columns (12 of 12);
+      @include shift (0 of 12);
+      background-color: transparent;
+      padding: 7.1vh 0 17.4vh;
+
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 5.5vh;
+        color: $blue;
+        font-size: 46px !important;
+        font-weight: 500 !important;
+        text-align: center;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      h1,
+      label {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 36px;
+        font-weight: 300;
+      }
+
+      label,
+      p {
+        color: $blue;
+        align-self: flex-start;
+        margin-left: 22%;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        @include span-columns (7 of 12);
+        @include omega;
+        margin-bottom: 3.5vh;
+        height: 70px;
+        border-color: $blue;
+        border-radius: 30px;
+      }
+
+      .login-button-box {
+        @include span-columns (4 of 4);
+        @include omega;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        input.submit {
+          width: 59%;
+          margin-top: 0vh;
+          padding: 1.3vh;
+          font-size: 36px;
+          color: #3B86FF;
+          background-color: #FFDC00;
+          border: solid 2px #FFDC00;
+          border-radius: 30px;
+          height: 70px;
+        }
+      }
+
+      a {
+        color: #FFF;
+        margin-bottom: 15px;
+
+        &:hover {
+          color: #FFF;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

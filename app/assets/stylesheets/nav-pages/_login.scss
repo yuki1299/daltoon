@@ -24,6 +24,10 @@
     position: absolute;
     top: -40.4%;
     right: -9%;
+
+    &.responsive {
+      display: none;
+    }
   }
 
   .bubble-top-access{

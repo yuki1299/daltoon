@@ -7,7 +7,7 @@
   	<%elsif params[:controller].present? && params[:controller] == "teacher/students_results" && params[:id].present? || params[:teacher_id].present? %>
   		<%= link_to "FINALIZAR SESSÃO", api_v1_session_path(params[:id] || params[:teacher_id]), method: :delete, class: "teacher-button"%>
   	<%else%>
-  		<%= link_to "ACESSAR COMO PROFESSOR", professor_login_teacher_path, class: "teacher-button"%>
+  		<%= link_to "ACESSAR COMO PROFESSOR", professor_login_teacher_path, class: "teacher-button responsive"%>
     <%end%>
     <%= image_tag("bubbles_top.png", class: "bubble-top-access") %>
   </div>
