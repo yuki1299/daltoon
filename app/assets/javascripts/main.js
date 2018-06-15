@@ -19,5 +19,5 @@ $(document).ready(function($){
 
   setTimeout(function(){
     $.fancybox.open($('#modal'));
-  }, 3*1000)
+  }, 1*1000)
 });

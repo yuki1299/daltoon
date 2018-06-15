@@ -1,3 +1,17 @@
 // Iphone 5/6
 @include media ($tablet) {
+  #question-two {
+    .answer1 {
+      left: 29%;
+      top: 10vh;
+    }
+
+    .answer3 {
+      top: 27vh;
+    }
+
+    .answer4 {
+      bottom: 8vh;
+    }
+  }
 }
