@@ -36,7 +36,7 @@
       @include span-columns (12 of 12);
       @include shift (0 of 12);
       background-color: transparent;
-      padding: 7.1vh 0 17.4vh;
+      padding: 7.1vh 0 9.4vh;
 
       h1 {
         font-size: 26px;
@@ -111,10 +111,6 @@
             margin-left: 5%;
             width: 50%;
             height: 17px;
-
-            .slider { 
-              
-            }
           }
         }
 
@@ -133,8 +129,12 @@
       }
 
       a {
-        color: #FFF;
+        font-size: 34px;
+        width: 100%;
         margin-bottom: 15px;
+        color: $blue;
+        float: left;
+        text-align: center;
 
         &:hover {
           color: #FFF;

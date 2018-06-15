@@ -2378,3 +2378,70 @@ Processing by Teacher::TeacherLoginController#index as HTML
 Completed 200 OK in 2022ms (Views: 2016.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:18:12 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 587ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Undefined mixin 'media'.):
+    4:     <title>Daltoon</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    7:     <%= stylesheet_link_tag 'application', media: 'all'%>
+    8: 	
+    9: 	  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+   10:     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" type="text/css" media="screen" />
+  
+app/assets/stylesheets/base/_buttons.scss:100:in `media'
+app/assets/stylesheets/base/_buttons.scss:100
+app/assets/stylesheets/base/_base.scss:11
+app/assets/stylesheets/application.css.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3919149712264317635_70144092843940'
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:18:58 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header_button.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2204ms (Views: 2195.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:22:48 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header_button.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2395ms (Views: 2388.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:22:59 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.8ms)
+  Rendered layouts/_header.html.erb (6.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2152ms (Views: 2146.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:24:15 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (1.8ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2123ms (Views: 2116.5ms | ActiveRecord: 0.8ms)
+
+
