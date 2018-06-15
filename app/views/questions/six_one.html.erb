@@ -1,6 +1,12 @@
+<div id="modal2">
+  <iframe src="https://www.youtube.com/embed/qSPBCnM7j4E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 <section id="question-six" class="content question-container">
   <%= image_tag("questions/question_6_2.jpg") %>
-  <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <%= link_to "#modal2", :class => "fancybox" do %>
+    <%= image_tag("questions/play_video_button.png", class: "play_video") %>
+  <% end %>
    
   <%= image_tag("questions/hint_question_6.png", class: "hint_button") %>
   <div class="question-text">

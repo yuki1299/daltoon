@@ -1,6 +1,7 @@
 // Iphone 5/6
 @include media ($tablet) {
   #modal,
+  #modal2,
   .mobile-finish-test,
   .question-container {
     transform: rotate(-90deg);
