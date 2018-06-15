@@ -1,0 +1,32 @@
+<section id="students-results" class="content">
+  <section class="class-results mobile">
+    <%= image_tag("bubbles_top.png", class: "bubble-top") %>
+    <div class="title-box">
+      <h2><%= "#{@classroom.school} - #{@classroom.slug}" %></h2>
+    </div>  
+    
+    <article class="students-list">
+     <ul class="scroll-style">
+	     <% if @students.empty? %>
+	       <li>
+	         Nenhum aluno na turma
+	       </li>
+	     <%else%>
+	       <% @students.order(name: :asc).each do |student| %>
+	         <%= link_to teacher_classroom_mobile_student_show_mobile_path(@teacher.id, @classroom.id, student.id) do%>
+	           <li>
+	             <%= "#{student.name}" %>
+	           </li>
+	         <%end%>
+	       <%end%>
+	     <%end%>
+	   </ul>
+      <button>ATIVAR CÓDIGO</button>
+    </article>
+
+    <article class="student-results">
+      <h2>Selecione um aluno</h2>
+    </article>
+  </section>
+  <%= link_to "ACESSAR COMO PROFESSOR", professor_login_teacher_path, class: "teacher-button responsive"%>
+</section>
