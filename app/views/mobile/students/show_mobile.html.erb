@@ -1,0 +1,63 @@
+<section id="students-results" class="content">
+  <section class="class-results mobile">
+    <div class="title-box">
+      <h2><%= "#{@classroom.school} - #{@classroom.slug}" %></h2>
+    </div>  
+    
+    <article class="students-list">
+     <ul class="scroll-style">
+	     <% if @students.empty? %>
+	       <li>
+	         Nenhum aluno na turma
+	       </li>
+	     <%else%>
+	       <% @students.order(name: :asc).each do |student| %>
+	         <%= link_to teacher_classroom_mobile_student_show_mobile_path(@teacher.id, @classroom.id, student.id) do%>
+	           <li>
+	             <%= "#{student.name}" %>
+	           </li>
+	         <%end%>
+	       <%end%>
+	     <%end%>
+	   </ul>
+      <button>ATIVAR CÓDIGO</button>
+    </article>
+
+    <article class="student-results">
+      <h2>Aluno: <%= @student.name%></h2>
+      <article class="graph-results">
+        <div class="circles-box">
+          <div class="correct-circles-box" style="flex: <%= @student.correct_answers == 0 ? 1 : @student.correct_answers; %>;">
+            <div class="wrong-circle set-height-wrong">
+              <p><%= @student.correct_answers %></p>
+            </div>
+          </div>
+
+          <div class="wrong-circles-box" style="flex: <%= @student.wrong_answers == 0 ? 1 : @student.wrong_answers; %>;">
+            <div class="correct-circle set-height-correct">
+              <p><%= @student.wrong_answers %></p>
+            </div>
+          </div>
+        </div>
+
+        <h3>
+          <%= @student.calculate_percentage_wrong %> de chance de ter DALTONISMO
+        </h3>
+      </article>
+
+      <article class="questions-results">
+        <ul>
+          <% @student.questions.order(number: :asc).each do |question|%>
+            <li>
+              <p> Pergunta <%= question.number%> </p>
+              <div class="answers-box">
+                <div class="wrong-question <%= 'active' if question.answer.present? &&question.answer != question.correct_answer %>" ></div>
+                <div class="right-question <%= 'active' if question.answer.present? &&question.answer == question.correct_answer %>" ></div>
+              </div>
+            </li>
+          <%end%>
+        </ul>
+      </article>
+  </section>
+</section>
+<%= link_to "VOLTAR", professor_students_results_path(@teacher.id), class: "teacher-button responsive"%>

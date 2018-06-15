@@ -7,7 +7,7 @@
     </div>
 
     <article class="class-list">
-      <ul class="scroll-style">
+      <ul class="scroll-style web">
         <% if @classrooms.empty? %>
           <li>
             Nenhuma classe criada
@@ -22,11 +22,25 @@
           <%end%>
         <%end%>
       </ul>
+      <ul class="scroll-style mobile">
+        <% if @classrooms.empty? %>
+          <li>
+            Nenhuma classe criada
+          </li>
+        <%else%>
+          <% @classrooms.order(school: :asc).each do |classroom| %>
+            <%= link_to teacher_classroom_mobile_student_index_mobile_path(@teacher.id, classroom.id) do%>
+              <li>
+                <%= "#{classroom.school} - #{classroom.slug} - #{classroom.code}" %>
+              </li>
+            <%end%>
+          <%end%>
+        <%end%>
+      </ul>
     </article>
     
     <div class="add-class">
-      <%= link_to "ADICIONAR TURMA", new_teacher_classroom_path(@teacher.id), class: "web" %>
-      <%= link_to "ADICIONAR TURMA", new_teacher_classroom_path(@teacher.id), class: "mobile" %>
+      <%= link_to "ADICIONAR TURMA", new_teacher_classroom_path(@teacher.id) %>
       <%= image_tag("bubbles_bottom.png", class: "bubble-bottom") %>
     </div>
   </section>

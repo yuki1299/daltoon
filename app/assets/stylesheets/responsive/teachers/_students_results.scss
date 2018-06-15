@@ -2,8 +2,12 @@
 @include media ($tablet) {
 	#students-results {
   	margin-bottom: 4%;
+    display: flex;
+  	margin-top: 140px;
+    justify-content: center;
 
 	  .class-container {
+      flex: 1;
 	  	display: block;
 	    width: auto;
 	    float: none;
@@ -24,6 +28,17 @@
 
 	  .class-results {
 			display: none;
+
+      .students-list {
+        button {
+          font-size: 12px;
+        }
+      }
+
+			&.mobile{
+				display: block;
+				width: 90%;
+			}
 	  }
 
 	  .bubble-top,
@@ -39,4 +54,21 @@
 	    display:block;
 	  }
 	}
+
+  .teacher-button {
+    display: none;
+
+    &.responsive {
+      display: block;
+      margin-top: 1vh;
+      margin-left: 5%;
+      float: left;
+      padding: 20px 40px;
+      font-size: 20px;
+      color: #3B86FF;
+      border: solid 2px #FFDC00;
+      border-radius: 12px;
+      background-color: #FFDC00;
+    }
+  }
 }

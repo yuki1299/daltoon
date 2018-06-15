@@ -226,6 +226,8 @@ textarea {
 
 // GENERAL BUBBLES
 #students-results {
+  display: block;
+  
   .bubble-top {
     width: 10%;
     position: absolute;
@@ -242,7 +244,7 @@ textarea {
     z-index: -1;
   }
 
-  .mobile{
+  &.mobile{
     display:none;
   }
 }

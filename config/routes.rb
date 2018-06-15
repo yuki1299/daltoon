@@ -12,8 +12,12 @@ Rails.application.routes.draw do
 
   resources :teachers  do
     resources :classrooms do
-      get '/students'            , to: 'students#index'
-      get '/students/:student_id', to: 'students#show', as: :student_show
+      get '/students'                   , to: 'students#index'
+      get '/students/:student_id'       , to: 'students#show', as: :student_show
+      namespace :mobile do
+        get '/students'            , to: 'students#list', as: :student_index_mobile
+        get '/students/:student_id', to: 'students#show_mobile', as: :student_show_mobile
+      end
     end
   end
 
