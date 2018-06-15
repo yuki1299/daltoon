@@ -2378,3 +2378,696 @@ Processing by Teacher::TeacherLoginController#index as HTML
 Completed 200 OK in 2022ms (Views: 2016.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-15 01:32:02 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2598.4ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 2722ms (Views: 2701.1ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-15 01:32:22 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+7FrXU80FYRImoJ5pPcY5MZcRFU6Wjr1g/ibEKQ9B++DrEV/Arnpm62oTaC6XJF2+zHVR+MqHPi+mo2TTIin1g==", "student"=>{"name"=>"asdadasdasdasd", "classroom_id"=>"BCOAIXQL"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "BCOAIXQL"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "asdadasdasdasd"], ["classroom_id", 7]]
+  [1m[35m (62.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-1"], ["correct_answer", 1], ["student_id", 19], ["number", 1]]
+  [1m[35m (47.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-2"], ["correct_answer", 1], ["student_id", 19], ["number", 2]]
+  [1m[35m (39.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-3"], ["correct_answer", 1], ["student_id", 19], ["number", 3]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-4"], ["correct_answer", 1], ["student_id", 19], ["number", 4]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-5"], ["correct_answer", 1], ["student_id", 19], ["number", 5]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-6"], ["correct_answer", 1], ["student_id", 19], ["number", 6]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-7"], ["correct_answer", 1], ["student_id", 19], ["number", 7]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-8"], ["correct_answer", 1], ["student_id", 19], ["number", 8]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-9"], ["correct_answer", 1], ["student_id", 19], ["number", 9]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-10"], ["correct_answer", 1], ["student_id", 19], ["number", 10]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-11"], ["correct_answer", 1], ["student_id", 19], ["number", 11]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/19/questions-1
+Completed 302 Found in 308ms (ActiveRecord: 238.8ms)
+
+
+Started GET "/student/19/questions-1" for 127.0.0.1 at 2018-06-15 01:32:22 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"19"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:32:26 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 38.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/teacher/login-professor?username=sda%40lol.com.br&password=[FILTERED]&submitbutton=ACESSAR" for 127.0.0.1 at 2018-06-15 01:32:29 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  Parameters: {"username"=>"sda@lol.com.br", "password"=>"[FILTERED]", "submitbutton"=>"ACESSAR"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "sda@lol.com.br"], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 ORDER BY "teachers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/teacher/2/estudantes-resultados
+Completed 302 Found in 164ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 01:32:30 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 192.168.1.9 at 2018-06-15 01:36:34 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 192.168.1.9 at 2018-06-15 01:37:00 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 01:37:09 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header_button.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-15 01:37:12 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teacher/login-professor?username=sda%40lol.com.br&password=[FILTERED]&submitbutton=ACESSAR" for 192.168.1.9 at 2018-06-15 01:37:44 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  Parameters: {"username"=>"sda@lol.com.br", "password"=>"[FILTERED]", "submitbutton"=>"ACESSAR"}
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "sda@lol.com.br"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "teachers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "teachers"."id" = $6[0m  [["current_sign_in_at", "2018-06-15 04:37:45.073672"], ["last_sign_in_at", "2018-06-12 07:01:54.949073"], ["current_sign_in_ip", "192.168.1.9/32"], ["sign_in_count", 5], ["updated_at", "2018-06-15 04:37:45.074650"], ["id", 2]]
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/teacher/2/estudantes-resultados
+Completed 302 Found in 167ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-15 01:37:45 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teachers/2/classrooms/8/students" for 192.168.1.9 at 2018-06-15 01:37:57 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#index as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  Rendered students/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teachers/2/classrooms/10/students" for 192.168.1.9 at 2018-06-15 01:37:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#index as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"10"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 10], ["LIMIT", 1]]
+  Rendered students/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 44.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/teachers/2/classrooms/12/students" for 192.168.1.9 at 2018-06-15 01:38:04 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#index as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"12"}
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.7ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 12], ["LIMIT", 1]]
+  Rendered students/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/teachers/2/classrooms/7/students" for 192.168.1.9 at 2018-06-15 01:38:06 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#index as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"7"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 7], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 7]]
+  Rendered students/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/teachers/2/classrooms/7/students/18" for 192.168.1.9 at 2018-06-15 01:38:08 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#show as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"7", "student_id"=>"18"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.7ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 7], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 7]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 18]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 18]]
+  Rendered students/show.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 47.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 02:02:28 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.7ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/student/1/questions-1" for 192.168.1.9 at 2018-06-15 02:47:06 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.9 at 2018-06-15 03:44:17 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:49:32 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.4ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:49:52 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1185.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1281ms (Views: 1241.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:50:28 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 886ms (Views: 882.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:50:30 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:54:21 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.5ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:54:27 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1224.0ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1316ms (Views: 1277.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:54:29 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:54:30 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:58:18 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (22.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (29.1ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:58:24 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1167.2ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1267ms (Views: 1226.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 03:58:25 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header_button.html.erb (1.9ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 59.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:00:22 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 855ms (Views: 852.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:00:25 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:02 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (7.4ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:08 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:19 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:28 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:36 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:01:46 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1197.7ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1301ms (Views: 1257.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:03:25 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (3.1ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (10.5ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:03:31 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1235.8ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1338ms (Views: 1298.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:06:30 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 885ms (Views: 881.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:13:47 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:14:34 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 880ms (Views: 877.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:14:52 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (9.3ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:14:58 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:15:05 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:15:14 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:15:22 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1219.7ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1324ms (Views: 1281.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:15:36 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:17:10 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.2ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (5.3ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:17:17 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1182.5ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1278ms (Views: 1239.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:18:09 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (7.9ms)
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:18:15 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (1217.2ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1330ms (Views: 1284.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-15 04:18:26 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 1.1ms)
+
+
