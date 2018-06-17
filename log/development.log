@@ -5844,3 +5844,1196 @@ Processing by Mobile::StudentsController#list as HTML
 Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 192.168.1.9 at 2018-06-17 13:25:09 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (272.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 344ms (Views: 328.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/teacher/login-professor" for 192.168.1.9 at 2018-06-17 13:25:16 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 83ms (Views: 73.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:25:27 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-17 13:25:31 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teacher/login-professor?username=sda%40lol.com.br&password=[FILTERED]&submitbutton=ACESSAR" for 192.168.1.9 at 2018-06-17 13:25:44 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  Parameters: {"username"=>"sda@lol.com.br", "password"=>"[FILTERED]", "submitbutton"=>"ACESSAR"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "sda@lol.com.br"], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 ORDER BY "teachers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://192.168.1.12:3000/teacher/2/estudantes-resultados
+Completed 302 Found in 162ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:25:44 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (23.7ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 49.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/teachers/2/classrooms/10/mobile/students" for 192.168.1.9 at 2018-06-17 13:25:47 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"10"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.2ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 10], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:25:49 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teachers/2/classrooms/10/mobile/students" for 192.168.1.9 at 2018-06-17 13:25:51 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"10"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.2ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 10], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:25:54 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:25:55 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.6ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header_button.html.erb (8.8ms)
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:25:56 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 37.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:25:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:26:00 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (1.1ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:26:00 -0300
+  [1m[36mStudent Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered mobile/students/list.html.erb within layouts/application (4.2ms)
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:26:00 -0300
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:26:00 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered layouts/_header_button.html.erb (1.7ms)
+Processing by Mobile::StudentsController#list as HTML
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  Rendered layouts/_header.html.erb (11.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  [1m[36mTeacher Load (5.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (3.1ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 78ms (Views: 69.2ms | ActiveRecord: 2.8ms)
+
+
+  [1m[36mTeacher Load (1.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeacher Load (2.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  [1m[36mClassroom Load (1.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mClassroom Load (1.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Started GET "/teachers/2/classrooms/13/mobile/students" for 192.168.1.9 at 2018-06-17 13:26:00 -0300
+  Rendering mobile/students/list.html.erb within layouts/application
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering mobile/students/list.html.erb within layouts/application
+Processing by Mobile::StudentsController#list as HTML
+  [1m[36mStudent Exists (6.8ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"13"}
+  Rendered mobile/students/list.html.erb within layouts/application (20.3ms)
+  [1m[36mStudent Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 69.9ms | ActiveRecord: 19.8ms)
+
+
+  Rendered mobile/students/list.html.erb within layouts/application (9.5ms)
+  [1m[36mTeacher Load (10.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (11.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (17.0ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendering mobile/students/list.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  [1m[36mStudent Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 13], ["LIMIT", 1]]
+  Rendered mobile/students/list.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 175ms (Views: 105.7ms | ActiveRecord: 44.1ms)
+
+
+Completed 200 OK in 183ms (Views: 109.8ms | ActiveRecord: 33.5ms)
+
+
+Completed 200 OK in 98ms (Views: 64.0ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:26:01 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:26:01 -0300
+  Parameters: {"id"=>"2"}
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.9ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mClassroom Load (2.9ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (11.8ms)
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered teacher/students_results/index.html.erb within layouts/application (36.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 3.6ms)
+
+
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 80.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 192.168.1.9 at 2018-06-17 13:26:35 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 192.168.1.9 at 2018-06-17 13:26:58 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJD3KeZY2HLGtgFX/3FlXoSav394cmKYpWRPfcTw8sy7CsZf8w/hEjlKJyw3Yk5fuTNQfmyhgiK6y/Yx9PGKAA==", "student"=>{"name"=>"Oioi", "classroom_id"=>"Rcovovfd"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "Rcovovfd"], ["LIMIT", 1]]
+Redirected to http://192.168.1.12:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 192.168.1.9 at 2018-06-17 13:26:58 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 192.168.1.9 at 2018-06-17 13:27:15 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3o3id6UeiVNBRJ3z2ZGXddh0YDAGeaJTHlAeCzMP/R9ZF9MBsEmwM764u4gRgrx05d2PMRKqQukB/6dHAw6F0w==", "student"=>{"name"=>"Oioi", "classroom_id"=>"RCOVOVFD"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.9ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "RCOVOVFD"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Oioi"], ["classroom_id", 8]]
+  [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-1"], ["correct_answer", 1], ["student_id", 21], ["number", 1]]
+  [1m[35m (149.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-2"], ["correct_answer", 1], ["student_id", 21], ["number", 2]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-3"], ["correct_answer", 1], ["student_id", 21], ["number", 3]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-4"], ["correct_answer", 1], ["student_id", 21], ["number", 4]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-5"], ["correct_answer", 1], ["student_id", 21], ["number", 5]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-6"], ["correct_answer", 1], ["student_id", 21], ["number", 6]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-7"], ["correct_answer", 1], ["student_id", 21], ["number", 7]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-8"], ["correct_answer", 1], ["student_id", 21], ["number", 8]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-9"], ["correct_answer", 1], ["student_id", 21], ["number", 9]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-10"], ["correct_answer", 1], ["student_id", 21], ["number", 10]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-11"], ["correct_answer", 1], ["student_id", 21], ["number", 11]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-1
+Completed 302 Found in 321ms (ActiveRecord: 258.9ms)
+
+
+Started GET "/student/21/questions-1" for 192.168.1.9 at 2018-06-17 13:27:16 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-1" for 192.168.1.9 at 2018-06-17 13:27:25 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=2&question=1&student_id=21" for 192.168.1.9 at 2018-06-17 13:27:57 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"2", "question"=>"1", "student_id"=>"21"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 112]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-2
+Completed 302 Found in 20ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/student/21/questions-2" for 192.168.1.9 at 2018-06-17 13:27:58 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-2-1" for 192.168.1.9 at 2018-06-17 13:28:25 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#two_one as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/two_one.html.erb within layouts/application
+  Rendered questions/two_one.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=3&question=2&student_id=21" for 192.168.1.9 at 2018-06-17 13:28:34 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"3", "question"=>"2", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 113]]
+  [1m[35m (66.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-3
+Completed 302 Found in 78ms (ActiveRecord: 69.5ms)
+
+
+Started GET "/student/21/questions-3" for 192.168.1.9 at 2018-06-17 13:28:34 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=6&next_path=4&question=3&student_id=21" for 192.168.1.9 at 2018-06-17 13:28:36 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"6", "next_path"=>"4", "question"=>"3", "student_id"=>"21"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 6], ["id", 114]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-4
+Completed 302 Found in 35ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/student/21/questions-4" for 192.168.1.9 at 2018-06-17 13:28:36 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#four as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/four.html.erb within layouts/application
+  Rendered questions/four.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header_button.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=5&question=4&student_id=21" for 192.168.1.9 at 2018-06-17 13:28:51 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"5", "question"=>"4", "student_id"=>"21"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 115]]
+  [1m[35m (66.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-5
+Completed 302 Found in 77ms (ActiveRecord: 69.2ms)
+
+
+Started GET "/student/21/questions-5" for 192.168.1.9 at 2018-06-17 13:28:51 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-5" for 192.168.1.9 at 2018-06-17 13:28:57 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-5" for 192.168.1.9 at 2018-06-17 13:29:11 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-5" for 192.168.1.9 at 2018-06-17 13:29:22 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-5" for 192.168.1.9 at 2018-06-17 13:29:33 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=6&question=5&student_id=21" for 192.168.1.9 at 2018-06-17 13:30:51 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"6", "question"=>"5", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 116]]
+  [1m[35m (92.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-6
+Completed 302 Found in 101ms (ActiveRecord: 94.1ms)
+
+
+Started GET "/student/21/questions-6" for 192.168.1.9 at 2018-06-17 13:30:51 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#six as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/six.html.erb within layouts/application
+  Rendered questions/six.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=7&question=6&student_id=21" for 192.168.1.9 at 2018-06-17 13:31:52 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"7", "question"=>"6", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 117]]
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-7
+Completed 302 Found in 34ms (ActiveRecord: 27.4ms)
+
+
+Started GET "/student/21/questions-7" for 192.168.1.9 at 2018-06-17 13:31:52 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#seven as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/seven.html.erb within layouts/application
+  Rendered questions/seven.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=4&next_path=8&question=7&student_id=21" for 192.168.1.9 at 2018-06-17 13:31:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"4", "next_path"=>"8", "question"=>"7", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 4], ["id", 118]]
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-8
+Completed 302 Found in 27ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/student/21/questions-8" for 192.168.1.9 at 2018-06-17 13:31:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=9&question=8&student_id=21" for 192.168.1.9 at 2018-06-17 13:32:04 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"9", "question"=>"8", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 119]]
+  [1m[35m (59.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-9
+Completed 302 Found in 67ms (ActiveRecord: 60.8ms)
+
+
+Started GET "/student/21/questions-9" for 192.168.1.9 at 2018-06-17 13:32:05 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/21/questions-9" for 192.168.1.9 at 2018-06-17 13:32:09 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=10&question=9&student_id=21" for 192.168.1.9 at 2018-06-17 13:34:14 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"10", "question"=>"9", "student_id"=>"21"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 9], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 120]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-10
+Completed 302 Found in 34ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/student/21/questions-10" for 192.168.1.9 at 2018-06-17 13:34:14 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:34:34 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-17 13:34:40 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOoMBJ3LZP4fySZkRvOaafPtLxTZgXyPVaYJSSd0Ecws9yIm0EaY4fr76b1YWBP7zoC+BgDxWoJoxB/Kz8Gx9Q==", "student"=>{"name"=>"caio", "classroom_id"=>"rcovovfd"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "rcovovfd"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:34:40 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-17 13:34:52 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:34:52 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-17 13:35:09 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gfH+e5q7ycKKhMn9OWk3zR3kgBLa1PXz+/WX3qIjKqT57NBZ1zY13W+2BiQnwr5fIIkRAAOk0/7Gl4FdSpaKnQ==", "student"=>{"name"=>"Caio", "classroom_id"=>"RCOVOVFD"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.2ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "RCOVOVFD"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Caio"], ["classroom_id", 8]]
+  [1m[35m (71.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-1"], ["correct_answer", 1], ["student_id", 22], ["number", 1]]
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-2"], ["correct_answer", 1], ["student_id", 22], ["number", 2]]
+  [1m[35m (83.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-3"], ["correct_answer", 1], ["student_id", 22], ["number", 3]]
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-4"], ["correct_answer", 1], ["student_id", 22], ["number", 4]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-5"], ["correct_answer", 1], ["student_id", 22], ["number", 5]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-6"], ["correct_answer", 1], ["student_id", 22], ["number", 6]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-7"], ["correct_answer", 1], ["student_id", 22], ["number", 7]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-8"], ["correct_answer", 1], ["student_id", 22], ["number", 8]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-9"], ["correct_answer", 1], ["student_id", 22], ["number", 9]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-10"], ["correct_answer", 1], ["student_id", 22], ["number", 10]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-11"], ["correct_answer", 1], ["student_id", 22], ["number", 11]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/22/questions-1
+Completed 302 Found in 334ms (ActiveRecord: 296.7ms)
+
+
+Started GET "/student/22/questions-1" for 127.0.0.1 at 2018-06-17 13:35:09 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"22"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=11&question=10&student_id=21" for 192.168.1.9 at 2018-06-17 13:38:54 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"11", "question"=>"10", "student_id"=>"21"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 121]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/student/21/questions-11
+Completed 302 Found in 25ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/student/21/questions-11" for 192.168.1.9 at 2018-06-17 13:38:54 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"21"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=finish_test&question=11&student_id=21" for 192.168.1.9 at 2018-06-17 13:38:55 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"finish_test", "question"=>"11", "student_id"=>"21"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 21], ["number", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 122]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.12:3000/finish_test
+Completed 302 Found in 25ms (ActiveRecord: 19.9ms)
+
+
+Started GET "/finish_test" for 192.168.1.9 at 2018-06-17 13:38:55 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.9 at 2018-06-17 13:39:30 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 192.168.1.9 at 2018-06-17 13:39:36 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 36.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teacher/login-professor?username=sda%40lol.com.br&password=[FILTERED]&submitbutton=ACESSAR" for 192.168.1.9 at 2018-06-17 13:39:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::TeacherLoginController#index as HTML
+  Parameters: {"username"=>"sda@lol.com.br", "password"=>"[FILTERED]", "submitbutton"=>"ACESSAR"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "sda@lol.com.br"], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 ORDER BY "teachers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://192.168.1.12:3000/teacher/2/estudantes-resultados
+Completed 302 Found in 147ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:39:59 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 41.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students" for 192.168.1.9 at 2018-06-17 13:40:04 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#list as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering mobile/students/list.html.erb within layouts/application
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  Rendered mobile/students/list.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students/22" for 192.168.1.9 at 2018-06-17 13:40:05 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#show_mobile as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"22"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering mobile/students/show_mobile.html.erb within layouts/application
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 22]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 22]]
+  Rendered mobile/students/show_mobile.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header_button.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students/22" for 192.168.1.9 at 2018-06-17 13:40:09 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#show_mobile as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"22"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.7ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering mobile/students/show_mobile.html.erb within layouts/application
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 22]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 22]]
+  Rendered mobile/students/show_mobile.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header_button.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 45.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students/22" for 192.168.1.9 at 2018-06-17 13:40:10 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#show_mobile as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"22"}
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering mobile/students/show_mobile.html.erb within layouts/application
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 22]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 22]]
+  Rendered mobile/students/show_mobile.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 37.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students/22" for 192.168.1.9 at 2018-06-17 13:40:12 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#show_mobile as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"22"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering mobile/students/show_mobile.html.erb within layouts/application
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 22]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 22]]
+  Rendered mobile/students/show_mobile.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header_button.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (5.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/teachers/2/classrooms/8/mobile/students/21" for 192.168.1.9 at 2018-06-17 13:40:13 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Mobile::StudentsController#show_mobile as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"21"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering mobile/students/show_mobile.html.erb within layouts/application
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 21]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 21]]
+  Rendered mobile/students/show_mobile.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 40.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 192.168.1.9 at 2018-06-17 13:40:28 -0300
+Cannot render console from 192.168.1.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.6ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:40:45 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-17 13:40:49 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teacher/login-professor?username=sda%40lol.com.br&password=[FILTERED]&submitbutton=ACESSAR" for 127.0.0.1 at 2018-06-17 13:40:59 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  Parameters: {"username"=>"sda@lol.com.br", "password"=>"[FILTERED]", "submitbutton"=>"ACESSAR"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "sda@lol.com.br"], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 ORDER BY "teachers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/teacher/2/estudantes-resultados
+Completed 302 Found in 148ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/teacher/2/estudantes-resultados" for 127.0.0.1 at 2018-06-17 13:40:59 -0300
+Processing by Teacher::StudentsResultsController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teacher/students_results/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mCACHE Classroom Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Classroom Load (0.0ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  Rendered teacher/students_results/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teachers/2/classrooms/8/students" for 127.0.0.1 at 2018-06-17 13:41:01 -0300
+Processing by StudentsController#index as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.3ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  Rendered students/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teachers/2/classrooms/8/students/21" for 127.0.0.1 at 2018-06-17 13:41:03 -0300
+Processing by StudentsController#show as HTML
+  Parameters: {"teacher_id"=>"2", "classroom_id"=>"8", "student_id"=>"21"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mClassroom Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 LIMIT $2[0m  [["teacher_id", 2], ["LIMIT", 1]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms" WHERE "classrooms"."teacher_id" = $1 ORDER BY "classrooms"."school" ASC[0m  [["teacher_id", 2]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."classroom_id" = $1 LIMIT $2[0m  [["classroom_id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."classroom_id" = $1 ORDER BY "students"."name" ASC[0m  [["classroom_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1[0m  [["student_id", 21]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."student_id" = $1 ORDER BY "questions"."number" ASC[0m  [["student_id", 21]]
+  Rendered students/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header_button.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 46.6ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/api/v1/sessions/2" for 127.0.0.1 at 2018-06-17 13:42:06 -0300
+Processing by Api::V1::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0qn8YSv8Umlcf+H+661YfWK4wakGYRQp2prM9Jc2QO6qtNJDZnGudrlNLif1BtHvX9VQu98RMiTn+Np3f4Pg1w==", "id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 ORDER BY "teachers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-17 13:42:06 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_button.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-17 13:42:15 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"14sthdK0JjnkQd29K7vUjHGzodXLWMx4QKev9JHaokaTziveimvKtPTkv8xSSce5ff+Dr77HxPwWK6p1eFEf/w==", "student"=>{"name"=>"vinicius lima", "classroom_id"=>"RCOVOVFD"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "RCOVOVFD"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "vinicius lima"], ["classroom_id", 8]]
+  [1m[35m (75.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-1"], ["correct_answer", 1], ["student_id", 23], ["number", 1]]
+  [1m[35m (232.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-2"], ["correct_answer", 1], ["student_id", 23], ["number", 2]]
+  [1m[35m (60.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-3"], ["correct_answer", 1], ["student_id", 23], ["number", 3]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-4"], ["correct_answer", 1], ["student_id", 23], ["number", 4]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-5"], ["correct_answer", 1], ["student_id", 23], ["number", 5]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-6"], ["correct_answer", 1], ["student_id", 23], ["number", 6]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-7"], ["correct_answer", 1], ["student_id", 23], ["number", 7]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-8"], ["correct_answer", 1], ["student_id", 23], ["number", 8]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-9"], ["correct_answer", 1], ["student_id", 23], ["number", 9]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-10"], ["correct_answer", 1], ["student_id", 23], ["number", 10]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-11"], ["correct_answer", 1], ["student_id", 23], ["number", 11]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/23/questions-1
+Completed 302 Found in 482ms (ActiveRecord: 444.8ms)
+
+
+Started GET "/student/23/questions-1" for 127.0.0.1 at 2018-06-17 13:42:16 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"23"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/23/questions-1" for 127.0.0.1 at 2018-06-17 13:43:18 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"23"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
