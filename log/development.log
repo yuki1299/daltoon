@@ -7037,3 +7037,175 @@ Processing by QuestionsController#one as HTML
 Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2018-06-18 16:07:45 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "vinicius" does not exist
+):
+  
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `rescue in connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for ::1 at 2018-06-18 16:09:52 -0300
+  [1m[35m (72.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (8552.7ms)
+  Rendered layouts/_header_button.html.erb (7.3ms)
+  Rendered layouts/_header.html.erb (57.4ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 10294ms (Views: 10036.1ms | ActiveRecord: 124.0ms)
+
+
+Started GET "/student/1/questions-1" for ::1 at 2018-06-18 16:18:51 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (59.3ms)
+  Rendered layouts/_header_button.html.erb (2.9ms)
+  Rendered layouts/_header.html.erb (31.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 518ms (Views: 499.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-10" for ::1 at 2018-06-18 16:20:42 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (63.9ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (31.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 378ms (Views: 354.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/1/questions-9" for ::1 at 2018-06-18 16:20:50 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (69.3ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 174ms (Views: 145.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=10&question=9&student_id=1" for ::1 at 2018-06-18 16:20:53 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"10", "question"=>"9", "student_id"=>"1"}
+  [1m[36mStudent Load (60.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (70.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 1], ["number", 9], ["LIMIT", 1]]
+  [1m[35m (23.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3002/student/1/questions-10
+Completed 302 Found in 427ms (ActiveRecord: 164.9ms)
+
+
+Started GET "/student/1/questions-10" for ::1 at 2018-06-18 16:20:54 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (9.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=11&question=10&student_id=1" for ::1 at 2018-06-18 16:20:57 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"11", "question"=>"10", "student_id"=>"1"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 1], ["number", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3002/student/1/questions-11
+Completed 302 Found in 13ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/student/1/questions-11" for ::1 at 2018-06-18 16:20:57 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"1"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (100.9ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 200.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=finish_test&question=11&student_id=1" for ::1 at 2018-06-18 16:21:00 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"finish_test", "question"=>"11", "student_id"=>"1"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 1], ["number", 11], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3002/finish_test
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/finish_test" for ::1 at 2018-06-18 16:21:00 -0300
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 141ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-18 16:21:05 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
