@@ -7209,3 +7209,1680 @@ Processing by LoginController#index as HTML
 Completed 200 OK in 153ms (Views: 108.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-18 21:49:36 -0300
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-18 21:50:04 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (287.9ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 388ms (Views: 370.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/students" for 127.0.0.1 at 2018-06-18 21:50:42 -0300
+Processing by Api::V1::StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q/UdG13ICAO3x97swRG0nvUBTz8z0uxujI/8AyiWrgcR0M0orw5cZcxcGj6XFUey/8qBIKxGPs5CTAeFKkt3gA==", "student"=>{"name"=>"asd", "classroom_id"=>"BCOAIXQL"}, "commit"=>"ACESSAR"}
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."code" = $1 LIMIT $2[0m  [["code", "BCOAIXQL"], ["LIMIT", 1]]
+Unpermitted parameter: :classroom_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "classroom_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "asd"], ["classroom_id", 7]]
+  [1m[35m (77.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-1"], ["correct_answer", 1], ["student_id", 24], ["number", 1]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-2"], ["correct_answer", 1], ["student_id", 24], ["number", 2]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-3"], ["correct_answer", 1], ["student_id", 24], ["number", 3]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-4"], ["correct_answer", 1], ["student_id", 24], ["number", 4]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-5"], ["correct_answer", 1], ["student_id", 24], ["number", 5]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-6"], ["correct_answer", 1], ["student_id", 24], ["number", 6]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-7"], ["correct_answer", 1], ["student_id", 24], ["number", 7]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-8"], ["correct_answer", 1], ["student_id", 24], ["number", 8]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-9"], ["correct_answer", 1], ["student_id", 24], ["number", 9]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-10"], ["correct_answer", 1], ["student_id", 24], ["number", 10]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("description", "correct_answer", "student_id", "number") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "question-11"], ["correct_answer", 1], ["student_id", 24], ["number", 11]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-1
+Completed 302 Found in 295ms (ActiveRecord: 190.4ms)
+
+
+Started GET "/student/24/questions-1" for 127.0.0.1 at 2018-06-18 21:50:42 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-1" for 127.0.0.1 at 2018-06-18 21:52:08 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 822ms (Views: 821.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-1" for 127.0.0.1 at 2018-06-18 21:53:23 -0300
+Processing by QuestionsController#one as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/one.html.erb within layouts/application
+  Rendered questions/one.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 813ms (Views: 811.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=2&question=1&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:33 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"2", "question"=>"1", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 145]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-2
+Completed 302 Found in 29ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/student/24/questions-2" for 127.0.0.1 at 2018-06-18 21:53:33 -0300
+Processing by QuestionsController#two as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/two.html.erb within layouts/application
+  Rendered questions/two.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=3&question=2&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:37 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"3", "question"=>"2", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 146]]
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-3
+Completed 302 Found in 36ms (ActiveRecord: 29.9ms)
+
+
+Started GET "/student/24/questions-3" for 127.0.0.1 at 2018-06-18 21:53:37 -0300
+Processing by QuestionsController#three as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/three.html.erb within layouts/application
+  Rendered questions/three.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=4&next_path=4&question=3&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:40 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"4", "next_path"=>"4", "question"=>"3", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 4], ["id", 147]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-4
+Completed 302 Found in 30ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/student/24/questions-4" for 127.0.0.1 at 2018-06-18 21:53:40 -0300
+Processing by QuestionsController#four as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/four.html.erb within layouts/application
+  Rendered questions/four.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=5&question=4&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:47 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"5", "question"=>"4", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/send_answer?answer=2&next_path=5&question=4&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:47 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"5", "question"=>"4", "student_id"=>"24"}
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 148]]
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-5
+Completed 302 Found in 26ms (ActiveRecord: 18.7ms)
+
+
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-5
+Completed 302 Found in 24ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/student/24/questions-5" for 127.0.0.1 at 2018-06-18 21:53:47 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=6&question=5&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:51 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"6", "question"=>"5", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 149]]
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-6
+Completed 302 Found in 36ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/student/24/questions-6" for 127.0.0.1 at 2018-06-18 21:53:51 -0300
+Processing by QuestionsController#six as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/six.html.erb within layouts/application
+  Rendered questions/six.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-6-1" for 127.0.0.1 at 2018-06-18 21:53:55 -0300
+Processing by QuestionsController#six_one as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/six_one.html.erb within layouts/application
+  Rendered questions/six_one.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=7&question=6&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:56 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"7", "question"=>"6", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 150]]
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-7
+Completed 302 Found in 41ms (ActiveRecord: 35.7ms)
+
+
+Started GET "/student/24/questions-7" for 127.0.0.1 at 2018-06-18 21:53:56 -0300
+Processing by QuestionsController#seven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/seven.html.erb within layouts/application
+  Rendered questions/seven.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=8&question=7&student_id=24" for 127.0.0.1 at 2018-06-18 21:53:58 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"8", "question"=>"7", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 7], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 151]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-8
+Completed 302 Found in 20ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:53:58 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=9&question=8&student_id=24" for 127.0.0.1 at 2018-06-18 21:54:02 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"9", "question"=>"8", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 3], ["id", 152]]
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-9
+Completed 302 Found in 30ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:02 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=10&question=9&student_id=24" for 127.0.0.1 at 2018-06-18 21:54:06 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"10", "question"=>"9", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 153]]
+  [1m[35m (33.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-10
+Completed 302 Found in 42ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:06 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=11&question=10&student_id=24" for 127.0.0.1 at 2018-06-18 21:54:09 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"11", "question"=>"10", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 10], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 154]]
+  [1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-11
+Completed 302 Found in 55ms (ActiveRecord: 47.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:09 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=finish_test&question=11&student_id=24" for 127.0.0.1 at 2018-06-18 21:54:14 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"finish_test", "question"=>"11", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 11], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 1], ["id", 155]]
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/finish_test
+Completed 302 Found in 40ms (ActiveRecord: 34.6ms)
+
+
+Started GET "/finish_test" for 127.0.0.1 at 2018-06-18 21:54:14 -0300
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header_button.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (8.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (6.4ms)
+  Rendered layouts/_header.html.erb (9.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:20 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (7.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (23.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 129ms (Views: 128.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (6.6ms)
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:21 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:22 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (7.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header_button.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (10.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:29 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_button.html.erb (2.3ms)
+  Rendered layouts/_header.html.erb (7.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header_button.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 152.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:30 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (7.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.2ms)
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (29.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+Completed 200 OK in 125ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.5ms)
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 150ms (Views: 149.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:31 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 139ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+Completed 200 OK in 152ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header.html.erb (18.2ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 147ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (26.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (9.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 195ms (Views: 193.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered questions/eight.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+Completed 200 OK in 127ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 154ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (19.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (23.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (6.2ms)
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:32 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendering questions/nine.html.erb within layouts/application
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (3.3ms)
+  Rendered questions/nine.html.erb within layouts/application (3.6ms)
+  Rendered questions/nine.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 194ms (Views: 192.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_button.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (83.1ms)
+  Rendered layouts/_header_button.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (24.4ms)
+  Rendered layouts/_header.html.erb (36.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_header_button.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (21.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 312ms (Views: 310.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 332ms (Views: 330.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+Completed 200 OK in 347ms (Views: 344.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered questions/eight.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 407ms (Views: 402.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 21:54:33 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 21:54:46 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (287.9ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 370ms (Views: 364.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=10&question=9&student_id=24" for 127.0.0.1 at 2018-06-18 21:54:56 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"10", "question"=>"9", "student_id"=>"24"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-10
+Completed 302 Found in 57ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:54:56 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 21:55:45 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 22:00:35 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 22:00:44 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 22:05:00 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 22:05:43 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_button.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 98ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/24/questions-5" for 127.0.0.1 at 2018-06-18 22:06:21 -0300
+Processing by QuestionsController#five as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/five.html.erb within layouts/application
+  Rendered questions/five.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=6&question=5&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:24 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"6", "question"=>"5", "student_id"=>"24"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 149]]
+  [1m[35m (29.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-6
+Completed 302 Found in 39ms (ActiveRecord: 32.1ms)
+
+
+Started GET "/student/24/questions-6" for 127.0.0.1 at 2018-06-18 22:06:24 -0300
+Processing by QuestionsController#six as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/six.html.erb within layouts/application
+  Rendered questions/six.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=7&question=6&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:28 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"7", "question"=>"6", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 150]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-7
+Completed 302 Found in 19ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/student/24/questions-7" for 127.0.0.1 at 2018-06-18 22:06:28 -0300
+Processing by QuestionsController#seven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/seven.html.erb within layouts/application
+  Rendered questions/seven.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_button.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=3&next_path=8&question=7&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:30 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"3", "next_path"=>"8", "question"=>"7", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 7], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-8
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/student/24/questions-8" for 127.0.0.1 at 2018-06-18 22:06:30 -0300
+Processing by QuestionsController#eight as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eight.html.erb within layouts/application
+  Rendered questions/eight.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=2&next_path=9&question=8&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:34 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"2", "next_path"=>"9", "question"=>"8", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "questions" SET "answer" = $1 WHERE "questions"."id" = $2[0m  [["answer", 2], ["id", 152]]
+  [1m[35m (300.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-9
+Completed 302 Found in 307ms (ActiveRecord: 302.1ms)
+
+
+Started GET "/student/24/questions-9" for 127.0.0.1 at 2018-06-18 22:06:34 -0300
+Processing by QuestionsController#nine as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/nine.html.erb within layouts/application
+  Rendered questions/nine.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=10&question=9&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:38 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"10", "question"=>"9", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 9], ["LIMIT", 1]]
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-10
+Completed 302 Found in 10ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/student/24/questions-10" for 127.0.0.1 at 2018-06-18 22:06:38 -0300
+Processing by QuestionsController#ten as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/ten.html.erb within layouts/application
+  Rendered questions/ten.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header_button.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=11&question=10&student_id=24" for 127.0.0.1 at 2018-06-18 22:06:42 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"11", "question"=>"10", "student_id"=>"24"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/student/24/questions-11
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/student/24/questions-11" for 127.0.0.1 at 2018-06-18 22:06:42 -0300
+Processing by QuestionsController#eleven as HTML
+  Parameters: {"student_id"=>"24"}
+  Rendering questions/eleven.html.erb within layouts/application
+  Rendered questions/eleven.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header_button.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/send_answer?answer=1&next_path=finish_test&question=11&student_id=24" for 127.0.0.1 at 2018-06-18 22:08:43 -0300
+Processing by Api::V1::QuestionsController#answer as HTML
+  Parameters: {"answer"=>"1", "next_path"=>"finish_test", "question"=>"11", "student_id"=>"24"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."student_id" = $1 AND "questions"."number" = $2 LIMIT $3[0m  [["student_id", 24], ["number", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/finish_test
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/finish_test" for 127.0.0.1 at 2018-06-18 22:08:43 -0300
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finish_test" for 127.0.0.1 at 2018-06-18 22:08:56 -0300
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finish_test" for 127.0.0.1 at 2018-06-18 22:09:37 -0300
+Processing by QuestionsController#finish_test as HTML
+  Rendering questions/finish_test.html.erb within layouts/application
+  Rendered questions/finish_test.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header_button.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-18 22:09:44 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header_button.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-18 22:10:54 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (4.0ms)
+Started GET "/" for 127.0.0.1 at 2018-06-18 22:10:59 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2018-06-18 22:11:31 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1167.6ms)
+  Rendered layouts/_header_button.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1251ms (Views: 1232.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-18 22:13:21 -0300
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header_button.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher/login-professor" for 127.0.0.1 at 2018-06-18 22:13:27 -0300
+Processing by Teacher::TeacherLoginController#index as HTML
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering teacher/teacher_login/index.html.erb within layouts/application
+  Rendered teacher/teacher_login/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_button.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 32.6ms | ActiveRecord: 2.7ms)
+
+

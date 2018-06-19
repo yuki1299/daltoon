@@ -10,3 +10,13 @@
 @import "question_nine";
 @import "question_ten";
 @import "question_eleven";
+
+.logo-header{
+	display: none;
+}
+
+.site-content{
+	.message{
+		margin-bottom: 40px;
+	}	
+}

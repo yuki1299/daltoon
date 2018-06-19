@@ -19,7 +19,9 @@ $(document).ready(function($){
     closeEffect : 'none',
   });
 
-  setTimeout(function(){
-    $.fancybox.open($('#modal'));
-  }, 1*1000)
+  if($(".fancybox.dont-open").length == 0){
+    setTimeout(function(){
+      $.fancybox.open($('#modal'));
+    }, 1*1000)
+  }
 });
