@@ -1,3 +1,4 @@
+@import "../base/variables";
 @import "question_general";
 @import "question_one";
 @import "question_two";
@@ -19,4 +20,8 @@
 	.message{
 		margin-bottom: 40px;
 	}	
+}
+
+.question-text p {
+	font-family: $base-font-family
 }
